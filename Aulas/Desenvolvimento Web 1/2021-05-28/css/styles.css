@@ -1,0 +1,35 @@
+body,
+h2,
+h3 {
+  font-family: 'Rubik', sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+.nav,
+.services,
+.localization {
+  background-color: #003650;
+}
+
+.introduction,
+.clients,
+.footer {
+  background-color: #ebebeb;
+}
+
+.introduction-text {
+  margin: 0;
+}
+
+.card-img {
+  width: 150px;
+}
+
+/* Overrides bootstrap styles  */
+.card {
+  background-color: transparent;
+  border: none;
+}

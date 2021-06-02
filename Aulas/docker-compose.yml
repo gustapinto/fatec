@@ -1,0 +1,29 @@
+version: '3.1'
+
+services:
+  cpp:
+    image: gcc:11.1-bullseye
+    volumes:
+      - ./Algoritimos e Lógica de Programação/C++/:/scripts_cpp/
+    working_dir: /scripts_cpp/
+    tty: true
+
+  mariadb:
+    image: mariadb
+    command: --default-authentication-plugin=mysql_native_password
+    restart: unless-stopped
+    ports:
+      - 3306:3306
+    volumes:
+      - ./Modelagem de Bancos de Dados/SQL/database/:/var/lib/mysql
+    working_dir: /var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: example
+
+  phpmyadmin:
+    image: phpmyadmin
+    restart: always
+    ports:
+      - 8080:80
+    environment:
+      PMA_ARBITRARY: 1

@@ -1,0 +1,45 @@
+body {
+  background-color: lightgray;
+}
+
+.container {
+  width: 960px;
+  margin: auto;
+}
+
+.header {
+  background-color: red;
+  color: white;
+}
+
+.footer {
+  background-color: red;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.article {
+  width: 60%;
+}
+
+.article img {
+  width: 100%;
+}
+
+.links {
+  width: 30%;
+}
+
+@media (max-width: 600px) {
+  .container,
+  .article {
+    width: 100%;
+  }
+
+  .main {
+    display: block;
+  }
+}

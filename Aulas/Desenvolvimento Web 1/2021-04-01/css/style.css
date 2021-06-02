@@ -1,0 +1,74 @@
+body {
+    background-color: #ebebeb;
+    font-size: 9px;
+}
+
+.container {
+    width: 960px;
+    margin: auto;
+}
+
+.introduction,
+.characters,
+.gameplay,
+.more {
+    padding: 80px;
+    text-align: center;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+.characters,
+.more {
+    background-color: #404040;
+    color: #e1e1e1;
+}
+
+.introduction,
+.gameplay {
+    background-color: #fff;
+}
+
+.character {
+    width: 195px;
+}
+
+.character img {
+    border-radius: 50%;
+}
+
+.characters .flex {
+    margin-bottom: 75px;
+}
+
+.gameplay-desc {
+    width: 300px;
+}
+
+.gameplay p {
+    margin-bottom: 45px;
+}
+
+.gameplay img {
+    margin-bottom: 50px;
+}
+
+.more p {
+    margin-bottom: 60px;
+}
+
+.more button {
+    font-size: 20px;
+    font-family: serif;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.introduction {
+    margin-top: -3px; /* Fix the spacing between header */
+    padding-left: 160px;
+    padding-right: 160px;
+}

@@ -1,0 +1,92 @@
+body {
+  background-image: url('../images/background.jpg');
+  font-family: sans-serif;
+  font-style: italic;
+  margin: 0; /* Fix the spacing between header and footer from page borders*/
+}
+
+h2,
+h3 {
+  font-family: 'Permanent Marker', cursive;
+  margin-top: 0;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.container {
+  margin: auto;
+  width: 960px;
+}
+
+.navbar,
+.introduction,
+.contact {
+  background-color: #fff;
+}
+
+.navbar {
+  height: 50px;
+}
+
+.navbar img {
+  margin-left: 20px;
+}
+
+.navbar .items a {
+  color: #000;
+  line-height: 50px;
+  margin-right: 80px;
+  text-decoration: none;
+}
+
+.introduction,
+.products,
+.location,
+.contact {
+  padding: 80px;
+}
+
+.introduction {
+  margin-top: -4px; /* Fix the spacing between header */
+}
+
+.introduction p {
+  margin-top: 40px;
+}
+
+.products {
+  background-color: #ebebeb;
+}
+
+.card {
+  width: 200px;
+}
+
+.card img {
+  border-color: #fe0000;
+  border-radius: 50%;
+  border-style: solid;
+  border-width: 10px;
+}
+
+.location,
+.footer {
+  background-color: #fe0000;
+  color: #fff;
+}
+
+.location div iframe {
+  margin-right: 80px;
+}
+
+.footer {
+  height: 40px;
+  text-align: center;
+}
+
+.footer b {
+  line-height: 40px;
+}

@@ -1,0 +1,31 @@
+body {
+  margin: 0;
+  background-color: #ebebeb;
+}
+
+h2 {
+  font-family: 'Pacifico', cursive;
+}
+
+.about {
+  background-color: #fff;
+}
+
+.custom-navbar,
+.custom-footer,
+.menu {
+  background-color: #382119;
+}
+
+.custom-navbar {
+  line-height: 50px;
+}
+
+.localization {
+  background-color: #d3c39d
+}
+
+.logo {
+  height: 50px;
+  width: 50px;
+}

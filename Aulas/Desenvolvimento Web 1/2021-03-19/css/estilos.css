@@ -1,0 +1,88 @@
+body {
+  background-color: #ebebeb;
+}
+
+h2 {
+  font-family: 'Pacifico', cursive;
+}
+
+.container {
+  width: 960px;
+  margin: auto;
+}
+
+.flex {
+  display: flex;
+}
+
+.logo {
+  height: 50px;
+  margin: 10px;
+}
+
+.navbar {
+  background-color: #382119;
+  color: #fff;
+  display: flex;
+  height: 80px;
+  justify-content: space-between;
+}
+
+.navbar-item {
+  color: #fff;
+  font-size: 24px;
+  line-height: 80px;
+  margin-right: 80px;
+  text-decoration: none;
+}
+
+.sobre {
+  background-color: #fff;
+  padding: 80px;
+}
+
+.sobre .foto {
+  height: 320px;
+  margin-right: 80px;
+}
+
+.texto-sobre {
+  font-size: 14px;
+  width: 380px;
+}
+
+.cardapio {
+  background-color: #382119;
+  color: #fff;
+  padding: 80px;
+}
+
+.foto {
+  border-radius: 50%;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 5px;
+  color: #000;
+  font-size: 14px;
+  margin-right: 30px;
+  padding: 5px;
+}
+
+.cardapio .foto {
+  height: 170px;
+}
+
+.localizacao {
+  background-color: #d3c39d;
+  padding: 80px;
+}
+
+.rodape {
+  background-color: #382119;
+  color: #fff;
+  height: 70px;
+  line-height: 70px;
+  text-align: center;
+}

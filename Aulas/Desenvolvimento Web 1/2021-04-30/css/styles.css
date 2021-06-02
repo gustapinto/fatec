@@ -1,0 +1,125 @@
+body {
+  margin: 0;
+  background-color: #ebebeb;
+  font-family: 'Roboto', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: 'Roboto Slab', sans-serif;
+}
+
+.main-img {
+  width: 470px;
+}
+
+.card {
+  background-color: #fff;
+  width: 225px;
+}
+
+.card-content {
+  margin: 5px
+}
+
+.container {
+  margin: auto;
+  width: 960px;
+}
+
+.interview-img {
+  width: 715px;
+}
+
+.interview-content,
+.main-content {
+  margin-left: 25px;
+}
+
+.main-section {
+  margin-top: 30px;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer {
+  background-color: #acff00;
+  height: 148px;
+  line-height: 148px;
+  margin-top: 25px;
+  width: 100%;
+}
+
+.footer .container .flex {
+  align-items: center;
+  height: 148px;
+}
+
+.footer-text {
+  line-height: normal;
+}
+
+.footer-text h4 {
+  margin-bottom: 0;
+}
+
+.nav {
+  background-color: #acff00;
+  height: 90px;
+  line-height: 90px;
+  width: 100%;
+}
+
+.nav h1 {
+  margin: 0;
+}
+
+.post-img {
+  width: 225px;
+}
+
+.section-title {
+  background-color: #acff00;
+  font-size: 24px;
+}
+
+.social-button {
+  height: 33px;
+  margin-right: 10px;
+}
+
+@media (max-width: 1000px) {
+  .flex {
+    display: block;
+  }
+
+  .card,
+  .card-content,
+  .interview-img,
+  .interview-content,
+  .main-img {
+    width: 95%;
+    margin: auto;
+    display: block;
+  }
+
+  .container,
+  .post-img {
+    width: 100%;
+  }
+
+  .footer,
+  .nav {
+    line-height: inherit;
+    padding: 10px;
+  }
+
+  .footer .container .flex {
+    height: 0;
+  }
+}

@@ -1,0 +1,102 @@
+body {
+  font-family: 'Rubik', sans-serif;
+  margin-top: 0;
+  margin-bottom: 14;
+}
+
+.banner {
+  height: 540px;
+}
+
+.text {
+  font-family: sans-serif;
+  font-style: italic;
+  font-weight: 400;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.container {
+  width: 960px;
+  margin: auto;
+  box-shadow: 0px 0px 20px 0px rgba(00, 00, 00, 0.5);
+}
+
+.navbar {
+  background-color: #003650;
+  color: #fff;
+  display: flex;
+  height: 80px;
+  justify-content: space-between;
+  padding-left: 80px;
+}
+
+.nav-item {
+  color: #fff;
+  font-size: 14px;
+  line-height: 80px;
+  margin-right: 80px;
+  text-decoration: none;
+}
+
+.introduction {
+  background-color: #ebebeb;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  padding-left: 160px;
+  padding-right: 160px;
+}
+
+.services {
+  background-color: #003650;
+  color: #fff;
+  padding: 80px;
+}
+
+.card {
+  font-size: 14px;
+  width: 150px;
+}
+
+.clients {
+  background-color: #ebebeb;
+  padding: 80px;
+}
+
+.clients p {
+  margin-bottom: 40px;
+}
+
+.client-image {
+  width: 160px;
+}
+
+.localization {
+  background-color: #003650;
+  color: #fff;
+  padding: 80px;
+}
+
+.footer {
+  background-color: #ebebeb;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  color: #003650;
+  font-size: 10px;
+}
+
+.introduction h2,
+.services h2,
+.clients h2,
+.localization h2 {
+  margin-bottom: 40px;
+}
+
+h2,
+h3 {
+  font-family: 'Rubik', sans-serif;
+}
