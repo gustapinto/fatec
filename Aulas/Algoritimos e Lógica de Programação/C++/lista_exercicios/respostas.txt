@@ -1,0 +1,200 @@
+Gustavo henrique pinto
+
+respostas
+
+---
+
+1.
+
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    int qtde_cavalos;
+    int qtde_ferraduras;
+
+    cout << "Informe quantos cavalos foram comprados: ";
+    cin >> qtde_cavalos;
+
+    qtde_ferraduras = qtde_cavalos * 4;
+
+    cout << endl;
+    cout << "Serão necessárias " << qtde_ferraduras << " ferraduras \n";
+
+    return 0;
+}
+
+---
+
+2.
+
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    float aposta_1;
+    float aposta_2;
+    float aposta_total;
+    float premio_total;
+    float premio_ponderado;
+    float premio_recebido_1;
+    float premio_recebido_2;
+
+    cout << "Informe o valor da primeira aposta: ";
+    cin >> aposta_1;
+
+    cout << "Informe o valor da segunda aposta: ";
+    cin >> aposta_2;
+
+    aposta_total = aposta_1 + aposta_2;
+
+    cout << "Informe o valor total do prêmio: ";
+    cin >> premio_total;
+
+    premio_ponderado = premio_total / aposta_total;
+
+    premio_recebido_1 = premio_ponderado * aposta_1;
+    premio_recebido_2 = premio_ponderado * aposta_2;
+
+    cout << endl;
+    cout << "O jogador 1 receberá R$ " << premio_recebido_1 << endl;
+    cout << "O jogador 2 receberá R$ " << premio_recebido_2 << endl;
+
+    return 0;
+}
+
+---
+
+3.
+
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    const int VALOR_CAMISA_PEQUENA = 12;
+    const int VALOR_CAMISA_MEDIA = 15;
+    const int VALOR_CAMISA_GRANDE = 18;
+
+    int qtde_camisas_pequenas;
+    int qtde_camisas_medias;
+    int qtde_camisas_grandes;
+    int valor_total_camisas_pequenas;
+    int valor_total_camisas_medias;
+    int valor_total_camisas_grandes;
+    int valor_total_da_venda;
+
+    cout << "Informe quantas camisas pequenas foram vendidas: ";
+    cin >> qtde_camisas_pequenas;
+
+    cout << "Informe quantas camisas médias foram vendidas: ";
+    cin >> qtde_camisas_medias;
+
+    cout << "Informe quantas camisas grandes foram vendidas: ";
+    cin >> qtde_camisas_grandes;
+
+    valor_total_camisas_pequenas = VALOR_CAMISA_PEQUENA * qtde_camisas_pequenas;
+    valor_total_camisas_medias = VALOR_CAMISA_MEDIA * qtde_camisas_medias;
+    valor_total_camisas_grandes = VALOR_CAMISA_GRANDE * qtde_camisas_grandes;
+
+    valor_total_da_venda = valor_total_camisas_pequenas
+        + valor_total_camisas_medias
+        + valor_total_camisas_grandes;
+
+    cout << endl;
+    cout << "Valor total da venda: R$ " << valor_total_da_venda << endl;
+
+    return 0;
+}
+
+---
+
+4.
+
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    string const VETOR_PALESTRAS[4] = {
+        "| Linux                    | Auditório 1         | 8h as 9h   |",
+        "| Recuperação de desastres | Auditório 2         | 9h as 10h  |",
+        "| Windows Server           | Auditório 3         | 13h as 14h |",
+        "| Lógica e Programação     | Auditório Principal | 15h as 17h |",
+    };
+
+    int codigo_palestra;
+    int indice_palestra;
+
+    cout << "Informe o código da palestra: ";
+    cin >> codigo_palestra;
+
+
+    if (codigo_palestra > 4 || codigo_palestra <= 0) {
+        cout << endl;
+        cout << "O código informado não existe, por favor tente novamente\n";
+
+        return 0;
+    }
+
+    indice_palestra = codigo_palestra - 1;
+
+    cout << endl;
+    cout << "|-------------------------------------------------------------|\n";
+    cout << "| Palestra                 | Local               | Horário    |\n";
+    cout << "|-------------------------------------------------------------|\n";
+    cout << VETOR_PALESTRAS[indice_palestra] << endl;
+    cout << "|-------------------------------------------------------------|\n";
+
+    return 0;
+}
+
+---
+
+5.
+
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    int const MG_POR_ML = 500;
+    int const GOTAS_POR_ML = 20;
+
+    int idade_paciente;
+    float peso_paciente;
+    float mg_a_serem_tomados;
+    float ml_a_serem_tomados;
+    float gotas_a_serem_tomadas;
+
+    cout << "Informe a idade do paciente: ";
+    cin >> idade_paciente;
+
+    cout << "Informe o peso do paciente: ";
+    cin >> peso_paciente;
+
+    // C++ não permite o use de switch com float :/
+    if (idade_paciente >= 12) {
+        if (peso_paciente >= 60) mg_a_serem_tomados = 1000;
+        if (peso_paciente < 60) mg_a_serem_tomados = 875;
+    } else {
+        if (peso_paciente < 5) mg_a_serem_tomados = 0;
+        if (peso_paciente >= 5 && peso_paciente <= 9) mg_a_serem_tomados = 125;
+        if (peso_paciente > 9 && peso_paciente <= 16) mg_a_serem_tomados = 250;
+        if (peso_paciente > 16 && peso_paciente <= 24) mg_a_serem_tomados = 375;
+        if (peso_paciente > 24 && peso_paciente <= 30) mg_a_serem_tomados = 500;
+        if (peso_paciente > 30) mg_a_serem_tomados = 750;
+    }
+
+    ml_a_serem_tomados = mg_a_serem_tomados / MG_POR_ML;
+    gotas_a_serem_tomadas = ml_a_serem_tomados * GOTAS_POR_ML;
+
+    cout << endl;
+    cout << "O paciente deve tomar " << gotas_a_serem_tomadas << " gotas\n";
+
+    return 0;
+}
+
+---
