@@ -1,0 +1,40 @@
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-weight: bold;
+}
+
+.about-text {
+  width: 40rem;
+}
+
+.bg-deep-red {
+  background-color: #bf1717;
+}
+
+/* overrides bootstrap styles */
+.card {
+  border: 1px solid #e5e5e5;
+}
+
+.card-body {
+  background-color: #e5e5e5;
+}
+
+@media screen and (max-width: 768px) {
+  .about-text {
+    width: 100%;
+  }
+
+  .banner-image-container {
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
