@@ -1,0 +1,33 @@
+Gustavo Henrique Pinto
+
+1. Máscara: 255.255.252.0
+   Rede: 192.68.0.0
+   Broadcast: 192.168.3.255
+
+2. Máscara: 255.255.255.252
+   Qtde Hosts: 2
+   Broadcast: 10.0.0.3
+
+3. Máscara: 255.255.0.0
+   Qtde Hosts: 65534
+   Broadcast: 172.16.255.255
+
+4. Máscara: 255.255.255.252
+   Qtde Hosts: 6
+   Broadcast: 192.168.1.7
+
+5. Qtde Hosts: 254
+   Broadcast: 192.168.0.255
+   Qtde Sub Redes: 1
+
+6. Qtde Hosts: 30
+   Broadcast: 172.16.50.32
+   Qtde Sub Redes: 1
+
+7. Qtde Hosts: 1022
+   Broadcast: 192.168.3.255
+   Qtde Sub Redes: 3
+
+8. 255.255.192.0: /26
+   255.252.0.0: /14
+   255.255.255.0: /24
