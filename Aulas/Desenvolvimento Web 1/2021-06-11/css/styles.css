@@ -1,0 +1,40 @@
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+footer {
+  background-color: #de0848;
+}
+
+h3,
+h4,
+h5 {
+  font-weight: bold;
+}
+
+.footer-items {
+  height: 40px;
+  line-height: 40px;
+}
+
+.img-globe {
+  vertical-align: sub;
+}
+
+/* Overrides bootstrap components */
+.btn {
+  background-color: #de0848;
+}
+
+.card {
+  background-color: #eee;
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  color: #de0848 !important;
+}
+
+.nav-link {
+  color: #000 !important;
+}
