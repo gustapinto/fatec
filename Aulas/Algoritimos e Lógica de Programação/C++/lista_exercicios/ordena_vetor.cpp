@@ -16,7 +16,7 @@ int main() {
     }
 
     for (int i = 0; i < qtde_elementos_por_vetor; i++) {
-        for (int j = 0; j < qtde_elementos_por_vetor; j++) {
+        for (int j = 0; j < (qtde_elementos_por_vetor - i); j++) {
             int elemento_atual = vetor[j];
             int proximo_elemento = vetor[j + 1];
 
