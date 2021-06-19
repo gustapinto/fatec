@@ -1,0 +1,34 @@
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+footer {
+  height: 45px;
+  line-height: 45px;
+}
+
+h3,
+h5,
+h6 {
+  font-weight: bold;
+}
+
+.bg-gray {
+  background-color: #f8f9fb !important;
+}
+
+.bg-pink {
+  background-color: #fd0d55 !important;
+}
+
+.fnt-pink {
+  color: #fd0d55 !important;
+}
+
+.fnt-small {
+  font-size: 0.85rem !important;
+}
+
+.img-align-top {
+  vertical-align: top;
+}
