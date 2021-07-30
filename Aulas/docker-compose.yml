@@ -20,10 +20,3 @@ services:
     environment:
       MYSQL_ROOT_PASSWORD: example
 
-  phpmyadmin:
-    image: phpmyadmin
-    restart: always
-    ports:
-      - 8080:80
-    environment:
-      PMA_ARBITRARY: 1
