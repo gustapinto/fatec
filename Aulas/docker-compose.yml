@@ -1,22 +1,31 @@
 version: '3.1'
 
 services:
-  cpp:
+  fatec_cpp:
     image: gcc:11.1-bullseye
     volumes:
-      - ./Algoritimos e Lógica de Programação/C++/:/scripts_cpp/
-    working_dir: /scripts_cpp/
+      - ./Algoritimos e Lógica de Programação/C++/:/scripts/cpp/algoritimos/
+      - ./Estruturas de dados/:/scripts/cpp/estruturas_de_dados/
+    working_dir: /scripts/cpp
     tty: true
 
-  mariadb:
+  fatec_mariadb:
     image: mariadb
     command: --default-authentication-plugin=mysql_native_password
     restart: unless-stopped
     ports:
       - 3306:3306
     volumes:
-      - ./Modelagem de Bancos de Dados/SQL/database/:/var/lib/mysql
-    working_dir: /var/lib/mysql
+      - ./database/:/var/lib/mysql/
+      - ./Bancos de dados relacionais/:/scripts/mysql/bancos_relacionais/
+      - ./Modelagem de Bancos de Dados/SQL/:/scripts/mysql/modelagem_de_bancos/
+    working_dir: /scripts/mysql
     environment:
       MYSQL_ROOT_PASSWORD: example
 
+  fatec_java:
+    image: openjdk:11
+    volumes:
+      - ./Técnicas de programação 1/:/scripts/java/tecnicas_1/
+    working_dir: /scripts/java
+    tty: true
