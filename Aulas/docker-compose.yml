@@ -29,3 +29,13 @@ services:
       - ./Técnicas de programação 1/:/scripts/java/tecnicas_1/
     working_dir: /scripts/java
     tty: true
+
+  fatec_php:
+    image: php:8-apache
+    ports:
+      - 80:80
+    volumes:
+      - ./Desenvolvimento web 2/:/var/www
+      - ./Desenvolvimento web 2/:/var/www/html/
+    tty:
+      true
