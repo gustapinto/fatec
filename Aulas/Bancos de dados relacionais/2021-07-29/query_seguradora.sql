@@ -47,3 +47,21 @@ create table if not exists apolice (
     constraint frk_apolice_cliente foreign key (id_cliente)
         references cliente (id)
 );
+
+insert into cliente values(1, 'filadelfo', 'rua atlantica, 54');
+insert into cliente values(2, 'marcolino', 'rua guanabara, 275');
+insert into cliente values(3, 'jurisprudencio', 'rua 1, 1390');
+insert into cliente values(4, 'maria do bairro', 'rua nove de abril, 378');
+
+insert into carro values('plz3267', '98759235n', 'ford', 2015);
+insert into carro values('zza9090', 'k03845200', 'chevrolet',2019);
+insert into carro values('qwe0110', '90234995j', 'renault', 2012);
+insert into carro values('tre8831', '3545h9835', 'jeep', 2020);
+
+insert into apolice values(123, '78000', '1', 'plz3267');
+insert into apolice values(124, '96000', '2', 'zza9090');
+insert into apolice values(125, '36000', '3', 'qwe0110');
+insert into apolice values(126, '87000', '4', 'tre8831');
+
+insert into acidente values(1, 'av. carlos acuti', '2021-05-15', '10:00:00', 'tre8831');
+insert into acidente values(2, 'praca da republica', '2021-02-28', '20:30:00', 'plz3267');
