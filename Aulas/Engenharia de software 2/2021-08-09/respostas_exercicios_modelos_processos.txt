@@ -1,0 +1,23 @@
+Gustavo Henrique Pinto
+
+1. Modelo de processo pode ser definido como o conjunto de práticas e metodologias que orientam como organizar, projetar e desenvolver software de maior qualidade.
+
+2. O panorama geral do modelo de processo pode ser definido como a aplicação de metodologias (roteiros) de desenvolvimento de software pelos engenheiros de software e pela equipe de desenvolvimento que proporcionem maior controle e organização das diversas etapas da criação de um software, com essa modelagem de processos sendo implementada visando uma entrega final de maior qualidade e com uma menor taxa de erros.
+
+3. Os modelos de processo genéricos são aqueles que se fazem presentes em diversos modelos, eles ajudam a estruturar uma cadeia de eventos que leva ao desenvolvimento do software final. Os processos genéricos estabelecem cinco atividades principais: a comunicação entre o desenvolvedor e o cliente, o planejamento do software a ser desenvolvido, a modelagem desse, a construção (desenvolvimento) do software, e por fim, sua entrega ao cliente.
+
+4. O uso do fluxo de processo é importante pois ele irá reger o grau de flexibilidade e a capacidade de resposta imediata a mudanças de escopo durante o projeto, com esse fluxo podendo ser mais rígido, como o implementado pela metodologia de cascata, ou mais flexível e responsivo, como as mais modernas práticas de metodologia ágil.
+
+5. São as metodologias de processo que entram em ação quando o desenvolvimento do projeto já se encontra em um estado organizacional caótico, com os processos prescritivos sendo implementados para reequilibrar e reorganizar a construção do software, "trazendo ordem ao caos".
+
+6. Prototipação é o ato de criar uma versão de demonstração de um produto para que essa possa ser avaliada pelos seus futuros usuários, visando assim obter feedbacks para que a equipe de desenvolvimento possa trabalhar em melhorias para a próxima versão desse produto.
+O modelo cascata é uma metodologia que implementa processos mais rígidos e sequenciais ao desenvolvimento de software, por ter sido muito baseado em processos de engenharia esse modelo é orientado a planos e a etapas, que devem ser sempre muito bem especificadas e formalizadas quanto a seus requesitos, seguindo assim um fluxo de processo linear, sendo considerado já obsoleto.
+
+7. O uso de entregas incrementais é muito importante pois garante uma maior cadencia de entregas e de correção de eventuais erros. Essa metodologia também proporciona uma maior tomada de feedbacks com o cliente, melhorando a capacidade de previsão de mudança de escopo durante o andamento do projeto.
+
+8. Processos evolucionários são aqueles no qual o desenvolvimento de software ocorre de forma iterativa, valorizando a evolução gradual do software e a capacidade de responder de forma natural a expansões e mudanças de escopo do projeto.
+
+9. Processo unificado é uma metodologia que baseia-se na componentização, na arquitetura de software orientada a reuso e em um fluxo de processos cíclico e iterável para consolidar uma maior capacidade de resposta a mudanças de requesitos.
+
+10. PSP é um processo projetado para auxiliar no desenvolvimento de projetos individuais, favorecendo o aprimoramento das habilidades de gerenciamento e o comprometimento com a qualidade do produto final do engenheiro de software que segue essa metodologia.
+Junto com o PSP o TSP é um processo que visa capacitar e melhorar as habilidades e integração dos membros da equipe de desenvolvimento, regendo também como essas equipes deveriam se auto gerenciar, objetivando criar um ambiente que inspire a constante melhoria de processos e produtos.
