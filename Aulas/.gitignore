@@ -1,2 +1,4 @@
 database/
 **/html/
+*.class
+.idea/
