@@ -2,20 +2,18 @@
 
 using namespace std;
 
-int qtde_atletas;
-
-struct atleta {
+struct Atleta {
     string nome;
     string posicao;
     int idade;
     float altura;
 };
 
-void exibe_atletas_por_idade(struct atleta atletas[]) {
+void exibe_atletas_por_idade(int qtde_atletas, struct Atleta atletas[]) {
     for (int i = 0; i < qtde_atletas; i++) {
         for (int j = 0; j < (qtde_atletas - 1); j++) {
-            struct atleta atual = atletas[j];
-            struct atleta proximo = atletas[j + 1];
+            struct Atleta atual = atletas[j];
+            struct Atleta proximo = atletas[j + 1];
 
             if (atual.idade < proximo.idade) {
                 atletas[j] = proximo;
@@ -24,9 +22,11 @@ void exibe_atletas_por_idade(struct atleta atletas[]) {
         }
     }
 
+    cout << "Atletas por idade: \n";
+
     for (int i = 0; i < qtde_atletas; i++) {
         cout << "Atleta: " << atletas[i].nome << endl;
-        cout << "Posição:" << atletas[i].posicao << endl;
+        cout << "Posição: " << atletas[i].posicao << endl;
         cout << "Idade: " << atletas[i].idade << endl;
         cout << "Altura: " << atletas[i].altura << endl;
         cout << endl;
@@ -34,12 +34,14 @@ void exibe_atletas_por_idade(struct atleta atletas[]) {
 }
 
 int main() {
+    int qtde_atletas;
+
     cout << "Número de atletas no time: ";
     cin >> qtde_atletas;
 
     cout << endl;
 
-    struct atleta atletas[qtde_atletas];
+    struct Atleta atletas[qtde_atletas];
 
     for (int i = 0; i < qtde_atletas; i++) {
         cout << "Nome do atleta: ";
@@ -57,7 +59,7 @@ int main() {
         cout << endl;
     }
 
-    exibe_atletas_por_idade(atletas);
+    exibe_atletas_por_idade(qtde_atletas, atletas);
 
     return 0;
 }
