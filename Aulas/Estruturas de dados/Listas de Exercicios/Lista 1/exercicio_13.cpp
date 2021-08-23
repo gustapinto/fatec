@@ -8,7 +8,7 @@ int main() {
     cout << "Letra: ";
     cin >> letra;
 
-    switch (letra) {
+    switch (tolower(letra)) {
         case 'a':
         case 'e':
         case 'i':
