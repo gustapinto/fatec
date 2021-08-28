@@ -27,7 +27,7 @@ int main() {
     cout << "Quilometragem do percurso: ";
     cin >> quilometragem_percurso;
 
-    cout << "Tipo do carro: ";
+    cout << "Tipo do carro (A, B, C): ";
     cin >> tipo_carro;
 
     autonomia_por_quilometro = obtem_autonomia_por_tipo_do_carro(tipo_carro);
