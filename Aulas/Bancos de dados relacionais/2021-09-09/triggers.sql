@@ -1,13 +1,19 @@
 use empresa;
 
--- Define um novo trigger, seguindo a sintaxe do Maria DB
+-- altera o delimitador de linha padrão
+-- OBS: ESSA BAGAÇA É DEPENDENTE DE CLIENT
+delimiter $$
+
+-- define um novo trigger, seguindo a sintaxe do maria db
 create or replace trigger trg_item_insert
-    after insert on item for each row
-        update produto
-            -- Usa new. para acessar os novos dados, vindos do insert
-            set estoque = estoque - new.quantidade
-            where id = new.idproduto;
+   after insert on item
+    for each row begin
+      update produto
+         -- usa new. para acessar os novos dados, vindos do insert
+         set estoque = estoque - new.quantidade
+         where id = new.idproduto;
+   end $$
 
-insert into item values (10, 6, 5, 10);
+delimiter ;
 
-select * from produto p;
+select * from produto;
