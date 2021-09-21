@@ -1,11 +1,9 @@
 <?php
 
-require_once("./Pessoa.php");
-
 class SalaVirtual
 {
     public array $participantes;
-    public int $qtde;
+    public int $qtdeParticipantes;
     public string $titulo;
 
     public function __construct(
@@ -13,7 +11,7 @@ class SalaVirtual
         string $titulo,
     ) {
         $this->participantes = $participantes;
-        $this->qtde = count($participantes);
+        $this->qtdeParticipantes = count($participantes);
         $this->titulo = $titulo;
     }
 
