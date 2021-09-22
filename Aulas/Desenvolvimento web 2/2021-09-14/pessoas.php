@@ -1,6 +1,6 @@
 <?php
 
-require_once('./Pessoa.php');
+require_once('classes/Pessoa.php');
 
 $bar = new Pessoa(1.83, 17, 'Bar', 76.1);
 $barfoo = new Pessoa(1.92, 21, 'Bar Foo', 87);
