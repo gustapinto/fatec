@@ -95,7 +95,7 @@ create or replace trigger trg_empregado_after_update
             set @novo_salario = (select c.salario from cargo c
                 where c.descricao = new.cargo);
 
-            update empregado set salario = @novo_salario where id = new.id;
+            set new.salario = @novo_salario;
         end if;
     end //
 
