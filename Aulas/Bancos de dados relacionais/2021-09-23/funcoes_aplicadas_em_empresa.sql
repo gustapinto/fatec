@@ -37,6 +37,28 @@ create or replace function calcula_dias_de_atraso(pedido_id int)
         return dias_em_atraso;
     end //
 
+create or replace function obtem_gasto_anual_plano_de_saude()
+    returns int
+    begin
+        declare preco_anual_por_funcionario int default 300 * 12;
+        declare qtde_funcionarios int;
+
+        select count(e.id) into qtde_funcionarios from empregado e;
+
+        return preco_anual_por_funcionario * qtde_funcionarios;
+    end //
+
+create or replace function obtem_nome_funcionario_por_id(empregado_id int)
+    returns varchar(60)
+    begin
+        declare nome_funcionario varchar(60);
+
+        select e.nome into nome_funcionario from empregado e
+            where e.id = empregado_id;
+
+        return nome_funcionario;
+    end //
+
 delimiter ;
 
 select obtem_maior_salario("ENGENHEIRO");
@@ -46,3 +68,7 @@ select obtem_media_compras(1);  -- Vai retornar um inteiro
 select obtem_media_compras(5);  -- Deve retornar NULL, logo 0
 
 select calcula_dias_de_atraso(1);
+
+select obtem_gasto_anual_plano_de_saude();
+
+select obtem_nome_funcionario_por_id(3);
