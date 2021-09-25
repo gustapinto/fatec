@@ -4,10 +4,30 @@
 
 using namespace std;
 
-void retira_carros_para_que_um_saia(PilhaCarro *pilha, int tamanho_pilha) {
+void cadastra_carros_estacionados(PilhaCarro *pilha, int qtde_carros) {
+    Carro carro;
+
+    inicializar(pilha);
+
+    for (int i = 0; i < qtde_carros; i++) {
+        cout << "Carro: " << i + 1 << ": " << endl;
+
+        cout << "    Modelo: ";
+        cin >> carro.modelo;
+
+        cout << "    Placa: ";
+        cin >> carro.placa;
+
+        empilhar(pilha, carro, qtde_carros);
+    }
+
+    cout << endl;
+}
+
+void retira_carros_para_que_um_saia(PilhaCarro *pilha, int qtde_carros) {
     Carro carro_auxiliar;
     char placa_carro_que_quer_sair[7];
-    char placas_dos_carros_atras_do_desejado[tamanho_pilha];
+    char placas_dos_carros_atras_do_desejado[qtde_carros];
     int qtde_carros_atras_do_desejado = 0;
 
     cout << "Qual a placa do carro que quer sair? ";
@@ -15,7 +35,7 @@ void retira_carros_para_que_um_saia(PilhaCarro *pilha, int tamanho_pilha) {
     cout << endl;
 
     while(pilha->topo >= 0) {
-        desempilhar(pilha, &carro_auxiliar, tamanho_pilha);
+        desempilhar(pilha, &carro_auxiliar, qtde_carros);
 
         if (strcmp(carro_auxiliar.placa, placa_carro_que_quer_sair) == 0) {
             break;
@@ -39,7 +59,6 @@ void retira_carros_para_que_um_saia(PilhaCarro *pilha, int tamanho_pilha) {
 int main()
 {
     int qtde_carros;
-    Carro carro;
     PilhaCarro pilha_de_carros;
 
     cout << "Quantos carros estão na fila? ";
@@ -47,21 +66,7 @@ int main()
 
     pilha_de_carros.carros = (Carro*) malloc(sizeof(Carro) * qtde_carros);
 
-    inicializar(&pilha_de_carros);
-
-    for (int i = 0; i < qtde_carros; i++) {
-        cout << "Carro: " << i + 1 << ": " << endl;
-
-        cout << "    Modelo: ";
-        cin >> carro.modelo;
-
-        cout << "    Placa: ";
-        cin >> carro.placa;
-
-        empilhar(&pilha_de_carros, carro, qtde_carros);
-    }
-
-    cout << endl;
+    cadastra_carros_estacionados(&pilha_de_carros, qtde_carros);
 
     retira_carros_para_que_um_saia(&pilha_de_carros, qtde_carros);
 }
