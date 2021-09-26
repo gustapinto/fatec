@@ -46,7 +46,7 @@ Departamento busca_departamento_por_nome(
     Departamento departamento;
 
     for (int i = 0; i < qtde_departamentos; i++) {
-        if (strcmp(departamentos[i].nome, nome_departamento)) {
+        if (strcmp(departamentos[i].nome, nome_departamento) == 0) {
             departamento = departamentos[i];
         }
     }
