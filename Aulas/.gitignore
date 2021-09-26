@@ -4,3 +4,4 @@ database/
 .idea/
 **/Binarios/
 *.~lock*
+Estruturas de dados/**/core
