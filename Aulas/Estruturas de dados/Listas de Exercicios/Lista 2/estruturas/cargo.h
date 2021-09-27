@@ -46,7 +46,7 @@ Cargo busca_cargo_por_descricao(
     Cargo cargo;
 
     for (int i = 0; i < qtde_cargos; i++) {
-        if (strcmp(cargos[i].descricao, descricao_cargo)) {
+        if (strcmp(cargos[i].descricao, descricao_cargo) == 0) {
             cargo = cargos[i];
         }
     }
