@@ -31,7 +31,9 @@ services:
     tty: true
 
   fatec_php:
-    image: php:8-apache
+    build:
+      context: .
+      dockerfile: Dockerfile_php_apache
     ports:
       - 80:80
     volumes:

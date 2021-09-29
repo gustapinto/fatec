@@ -1,0 +1,10 @@
+FROM php:8-apache
+
+WORKDIR /var/www
+
+RUN apt-get update \
+    && docker-php-ext-install pdo_mysql
+
+EXPOSE 80
+
+RUN a2enmod rewrite
