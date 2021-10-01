@@ -10,6 +10,7 @@ create or replace function obtem_maior_salario(cargo varchar(50))
             where e.cargo = cargo);
     end //
 
+-- Exercício 1
 create or replace function obtem_media_compras(cliente_id int)
     returns float
     begin
@@ -23,6 +24,7 @@ create or replace function obtem_media_compras(cliente_id int)
         return ifnull(media_compras, 0);
     end //
 
+-- Exercício 2
 create or replace function calcula_dias_de_atraso(pedido_id int)
     returns int
     begin
@@ -37,6 +39,19 @@ create or replace function calcula_dias_de_atraso(pedido_id int)
         return dias_em_atraso;
     end //
 
+-- Exercicio 3
+create or replace function obtem_clientes_por_representante(representante_id int)
+    returns int
+    begin
+        declare qtde_clientes int;
+
+        set qtde_clientes = (select coalesce(count(c.id), 0) from cliente c
+            where c.idrepresentante = representante_id);
+
+        return qtde_clientes;
+    end //
+
+-- Exercício
 create or replace function obtem_gasto_anual_plano_de_saude()
     returns int
     begin
@@ -48,6 +63,7 @@ create or replace function obtem_gasto_anual_plano_de_saude()
         return preco_anual_por_funcionario * qtde_funcionarios;
     end //
 
+-- Exercício
 create or replace function obtem_nome_funcionario_por_id(empregado_id int)
     returns varchar(60)
     begin
@@ -72,3 +88,7 @@ select calcula_dias_de_atraso(1);
 select obtem_gasto_anual_plano_de_saude();
 
 select obtem_nome_funcionario_por_id(3);
+
+select obtem_clientes_por_representante(1);
+
+select obtem_clientes_por_representante(10);
