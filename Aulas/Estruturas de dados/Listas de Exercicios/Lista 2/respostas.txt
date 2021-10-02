@@ -1,0 +1,8 @@
+5. C
+
+6. A
+
+7. Os tipos abstratos de dados (TAD) são importantes pois permitem que operemos dados de forma a representarem conceitos e modelagems da vida real de forma padronizada, permitindo assim que os conceitos primordiais desses TADs sobrevivam através de linguagens, frameworks e equipes de trabalho de forma quase inalterada.
+
+8. Pilhas: os últimos elementos a serem inseridos serão os primeiros a serem removidos, LIFO
+   Filas: os primeiros elementos a serem inseridos serão os primeiros a serem removidos, FIFO
