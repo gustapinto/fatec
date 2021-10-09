@@ -1,8 +1,6 @@
 <?php
 
-require_once('Model.php');
-
-abstract class Model
+abstract class Modelo
 {
     protected PDO $pdo;
 
@@ -27,16 +25,8 @@ abstract class Model
         $colunas = implode(', ', array_keys($dados));
         $valores = implode("','", array_values($dados));
 
-        try {
-            $this->pdo->exec("
-                INSERT INTO `{$this->tabela}` (${colunas}) VALUES ('${valores}')
-            ");
-        } catch(PDOException $e) {
-            echo "Erro com PDO " . $e->getMessage();
-
-            die;
-        } catch (Exception $e) {
-            throw $e;
-        }
+        $this->pdo->exec("
+            INSERT INTO `{$this->tabela}` (${colunas}) VALUES ('${valores}')
+        ");
     }
 }

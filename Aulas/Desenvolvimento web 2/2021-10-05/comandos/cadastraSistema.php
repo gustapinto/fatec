@@ -1,17 +1,15 @@
 <?php
 
-require_once('Models/Sistemas.php');
-require_once('Helpers/StringHelper.php');
-require_once('Helpers/UrlHelper.php');
-
-var_dump($_POST);
+require_once('../src/Modelos/SistemasModelo.php');
+require_once('../src/Helpers/StringHelper.php');
+require_once('../src/Helpers/UrlHelper.php');
 
 $textoAleatorio = StringHelper::geraStringAleatoria();
 $linkEncurtado = UrlHelper::geraUrl($textoAleatorio);
 
-$model = new Sistemas();
+$modelo = new SistemasModelo();
 
-$model->cria([
+$modelo->cria([
     'sistema' => $_POST['sistema'],
     'link_original' => $_POST['link-original'],
     'link_encurtado' => $linkEncurtado,

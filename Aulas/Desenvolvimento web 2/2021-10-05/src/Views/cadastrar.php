@@ -14,7 +14,7 @@
     </div>
 
     <div>
-        <form action="../cadastrarSistema.php" method="POST">
+        <form action="../../comandos/cadastraSistema.php" method="POST">
             <div>
                 <input type="text" name="sistema" placeholder="Sistema">
             </div>

@@ -9,7 +9,9 @@ class StringHelper
         $aleatoria = '';
 
         for ($i = 0; $i < $tamanho; $i++) {
-            $aleatoria .= $characters[rand(0, strlen(self::CARACTERES) - 1)];
+            $indice = rand(0, strlen(self::CARACTERES) - 1);
+
+            $aleatoria .= self::CARACTERES[$indice];
         }
 
         return $aleatoria;
