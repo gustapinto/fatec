@@ -1,0 +1,5 @@
+1. Enquanto o malloc aloca um espaço de memória preenchendo-o com lixo de memória o calloc faz esse procedimento preenchendo o espaço alocado com zeros, e o realloc realiza o procedimento de a partir de um ponteiro alocado dinamicamente realocar esse espaço, expandindo-o ou reduzindo-o enquanto mantém os elementos originais. O cast antes da atribuição de uma alocação a uma variável pois os processos de alocação retornam um ponteiro de tipo void, necessitando assim que esse seja convertido para o tipo da variável, por conta de C++ lidar com tipagem estática e forte.
+
+4. Log N, N^2, N^3, N log N
+
+5. A alocação de memória estática é aquela feita de forma fixa durante a criação de um elemento, por exemplo, a criação de um vetor de modo v[10], a alocação dinâmica realiza-se de modo que um determinado bloco é alocado de forma fragmentada na memória utilizando-se uma função de alocação (malloc, calloc, realloc), já na alocação sequencial os espaços alocados por essas funções são dispostos de modo sequencial na memória.
