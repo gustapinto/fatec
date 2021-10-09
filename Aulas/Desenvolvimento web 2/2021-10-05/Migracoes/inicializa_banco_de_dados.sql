@@ -2,7 +2,7 @@ create database if not exists desenvolvimento_web;
 
 use desenvolvimento_web;
 
-create table if not exists sistema (
+create table if not exists sistemas (
     id int auto_increment,
     sistema varchar(30),
     link_original varchar(512) not null,

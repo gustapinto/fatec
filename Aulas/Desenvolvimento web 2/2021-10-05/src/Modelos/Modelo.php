@@ -29,4 +29,15 @@ abstract class Modelo
             INSERT INTO `{$this->tabela}` (${colunas}) VALUES ('${valores}')
         ");
     }
+
+    public function obtem(string|null $where = null): array
+    {
+        $where = is_null($where) ? '' : ("WHERE " . $where);
+
+        $resultados = $this->pdo->query("
+            SELECT * FROM `{$this->tabela}` {$where};
+        ")->fetchAll();
+
+        return $resultados;
+    }
 }

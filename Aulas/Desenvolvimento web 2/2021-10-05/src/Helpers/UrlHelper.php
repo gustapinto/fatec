@@ -6,6 +6,6 @@ class UrlHelper
     {
         $host = $_SERVER['HTTP_HOST'];
 
-        return $host . '/' . $uri;
+        return $host . '/2021-10-05?s=' . $uri;
     }
 }
