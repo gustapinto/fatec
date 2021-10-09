@@ -18,8 +18,12 @@ class Redirecionador
     {
         $modelo = new SistemasModelo();
 
-        $sistema = $modelo->obtem('link_encurtado LIKE "%' . $uri . '"')[0];
+        $sistemas = $modelo->obtem('link_encurtado LIKE "%' . $uri . '"');
 
-        self::redireciona($sistema['link_original']);
+        if (! empty($sistemas)) {
+            self::redireciona($sistemas[0]['link_original']);
+        }
+
+        self::view('erro.php');
     }
 }

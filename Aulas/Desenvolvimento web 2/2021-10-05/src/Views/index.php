@@ -6,7 +6,7 @@
 </head>
 <body>
     <h1>
-        Encurtador de link
+        Encurtador de links
     </h1>
 
     <div>
