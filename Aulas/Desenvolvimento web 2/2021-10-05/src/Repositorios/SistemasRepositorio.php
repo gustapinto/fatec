@@ -1,7 +1,7 @@
 <?php
 
-require_once('Repositorio.php');
-require_once('src/Modelos/SistemasModelo.php');
+require_once 'Repositorio.php';
+require_once __DIR__ . '/../Modelos/SistemasModelo.php';
 
 class SistemasRepositorio extends Repositorio
 {
@@ -28,5 +28,16 @@ class SistemasRepositorio extends Repositorio
         $this->modelo->atualizaPorId($dados, $sistema['id']);
 
         return $acessosIncrementados;
+    }
+
+    public function obtemSistemasOrdenadosPorAcessos(): array
+    {
+        $sistemas = $this->modelo->obtem();
+
+        $colunas = array_column($sistemas, 'acessos');
+
+        array_multisort($colunas, SORT_DESC, $sistemas);
+
+        return $sistemas;
     }
 }

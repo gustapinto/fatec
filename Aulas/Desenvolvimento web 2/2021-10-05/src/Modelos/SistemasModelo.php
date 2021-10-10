@@ -1,6 +1,6 @@
 <?php
 
-require_once('Modelo.php');
+require_once 'Modelo.php';
 
 class SistemasModelo extends Modelo
 {

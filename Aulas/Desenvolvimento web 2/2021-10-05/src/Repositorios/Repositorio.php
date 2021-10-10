@@ -1,6 +1,6 @@
 <?php
 
-require_once('src/Modelos/Modelo.php');
+require_once __DIR__ . '/../Modelos/Modelo.php';
 
 abstract class Repositorio
 {
