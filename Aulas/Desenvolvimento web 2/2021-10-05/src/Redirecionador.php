@@ -1,6 +1,6 @@
 <?php
 
-require_once('Modelos/SistemasModelo.php');
+require_once('Repositorios/SistemasRepositorio.php');
 
 class Redirecionador
 {
@@ -16,14 +16,16 @@ class Redirecionador
 
     public static function link(string $uri): void
     {
-        $modelo = new SistemasModelo();
+        $repositorio = new SistemasRepositorio();
 
-        $sistemas = $modelo->obtem('link_encurtado LIKE "%' . $uri . '"');
+        $sistema = $repositorio->obtemSistemaPorLinkEncurtado($uri);
 
-        if (! empty($sistemas)) {
-            self::redireciona($sistemas[0]['link_original']);
+        if ($sistema === null) {
+            self::view('erro.php');
         }
 
-        self::view('erro.php');
+        $repositorio->incrementaAcessos($sistema);
+
+        self::redireciona($sistema['link_original']);
     }
 }

@@ -40,4 +40,26 @@ abstract class Modelo
 
         return $resultados;
     }
+
+    public function atualiza(array $dados, string|null $where = null): void
+    {
+        $valores = [];
+
+        foreach ($dados as $coluna => $valor) {
+            $valores[] = "${coluna}='${valor}'";
+        }
+
+        $sqlValores = implode("','", $valores);
+
+        $sqlWhere = is_null($where) ? '' : "WHERE ${where}";
+
+        $this->pdo->exec("
+            UPDATE `{$this->tabela}` SET ${sqlValores} ${sqlWhere}
+        ");
+    }
+
+    public function atualizaPorId(array $dados, int $id): void
+    {
+        $this->atualiza($dados, 'id = ' . $id);
+    }
 }
