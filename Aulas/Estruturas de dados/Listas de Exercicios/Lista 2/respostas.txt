@@ -6,3 +6,25 @@
 
 8. Pilhas: os últimos elementos a serem inseridos serão os primeiros a serem removidos, LIFO
    Filas: os primeiros elementos a serem inseridos serão os primeiros a serem removidos, FIFO
+
+9. Pilhas são estruturas de dados no qual o último elemento a ser inserido será o primeiro elemento a ser removido (LIFO), as pilhas são usadas em processos que requerem que esse comportamento seja sempre correspondido, como no caso da correção de uma pilha de questionários.
+
+10. Filas são estruturas de dados no qual o primeiro elemento a ser inseridot também será o primeiro a sair (FIFO), elas são utilizadas principalmente para gerenciar operações cuja ordem importa, como no caso de um gerenciador que lida com uma fila de processos de sistema operacional, ou uma fila de Jobs e Messages esperando para ser disparada por um sistema de mensageria.
+
+11. Listas são estruturas de dados que armazenam múltiplas variáveis ordenadas, sendo como vetores dinâmicos, elas são utilizados quando há a necessidade de alternarmos os termos presentes dentro de um vetor durante a execução do programa.
+
+12. Alocação sequencial de memória é a alocação de um espaço de memória de N elementos de forma sequencial, ou seja, que possua blocos seguidos um do outro que totalizem o espaço alocado.
+
+13. Alocação estática é aquela em que após a alocação original o espaço em memória não mudará, um exemplo é a criação de um vetor[10] em c++, no qual o tamanho (10) não pode ser alterado.
+
+14. Alocação dinâmica de memória se dá a partir da alocação de N blocos de memória de forma fragmentada e não estática, realizada em c++ a partir das funções malloc, calloc e realloc.
+
+17. O(1) - O(1) - O(1) = O(1)
+
+18. a. melhor caso - O(1)
+       caso médio - O(n^2)
+       pior caso - O(n^3)
+
+18. b. melhor caso - O(n log n)
+       caso médio - O(n^2)
+       pior caso - O(n^3)
