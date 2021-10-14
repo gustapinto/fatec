@@ -1,11 +1,11 @@
-typedef struct bloco {
+typedef struct blocofila {
     int valor;
-    bloco *proximo;
-} No;
+    blocofila *proximo;
+} NoFila;
 
 typedef struct {
-    No *inicio;
-    No *fim;
+    NoFila *inicio;
+    NoFila *fim;
     int qtde_elementos;
 } FilaEncadeada;
 
@@ -20,10 +20,12 @@ bool fila_esta_vazia(FilaEncadeada *fila) {
 }
 
 void entrar(FilaEncadeada *fila, bool *erro, int valor_entrando) {
-    No *no_auxiliar = (No*) malloc(sizeof(No));
+    NoFila *no_auxiliar = (NoFila*) malloc(sizeof(NoFila));
 
     if (no_auxiliar == NULL) {
         *erro = true;
+
+        free(no_auxiliar);
     } else {
         no_auxiliar->valor = valor_entrando;
         no_auxiliar->proximo = NULL;
@@ -31,24 +33,25 @@ void entrar(FilaEncadeada *fila, bool *erro, int valor_entrando) {
         if (fila->inicio == NULL) {
             fila->inicio = no_auxiliar;
             fila->fim = no_auxiliar;
+            fila->qtde_elementos += 1;
+        } else {
+            fila->fim->proximo = no_auxiliar;
+            fila->fim = no_auxiliar;
+            fila->qtde_elementos += 1;
         }
-
-        fila->fim->proximo = no_auxiliar;
-        fila->fim = no_auxiliar;
-        fila->qtde_elementos += 1;
 
         *erro = false;
     }
-
-    free(no_auxiliar);
 }
 
 void sair(FilaEncadeada *fila, bool *erro, int *valor_saindo) {
-    if (! esta_vazia(fila)) {
+    if (! fila_esta_vazia(fila)) {
         *valor_saindo = fila->inicio->valor;
 
         if (fila->inicio == fila->fim) {
-            inicializar(fila);
+            fila->inicio = NULL;
+            fila->fim = NULL;
+            fila->qtde_elementos -= 1;
         } else {
             fila->inicio = fila->inicio->proximo;
             fila->qtde_elementos -= 1;
@@ -58,4 +61,17 @@ void sair(FilaEncadeada *fila, bool *erro, int *valor_saindo) {
     }
 
     *erro = true;
+}
+
+void exibe_fila(FilaEncadeada *fila) {
+    No no_auxiliar = fila->inicio;
+    int qtde_elementos = fila->qtde_elementos;
+
+    while (qtde_elementos > 0) {
+        cout << no_auxiliar->valor << endl;
+
+        no_auxiliar = no_auxiliar->proximo;
+
+        qtde_elementos -= 1;
+    }
 }

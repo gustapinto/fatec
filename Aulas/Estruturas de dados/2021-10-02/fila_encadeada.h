@@ -67,8 +67,6 @@ void entrar(FilaEncadeada *fila, bool *erro, int valor_entrando) {
 
         *erro = false;
     }
-
-    free(no_auxiliar);
 }
 
 void sair(FilaEncadeada *fila, bool *erro, int *valor_saindo) {
@@ -78,7 +76,9 @@ void sair(FilaEncadeada *fila, bool *erro, int *valor_saindo) {
         // Verifica se havia apenas um elemento na fila e zera a fila usando sua
         // função inicializadora se assim o for
         if (fila->inicio == fila->fim) {
-            inicializar(fila);
+            fila->inicio = NULL;
+            fila->fim = NULL;
+            fila->qtde_elementos -= 1;
         } else {
             fila->inicio = fila->inicio->proximo; // Avança o ponteiro da fila
             fila->qtde_elementos -= 1; // Decrementa a quatidade de elementos
@@ -88,4 +88,17 @@ void sair(FilaEncadeada *fila, bool *erro, int *valor_saindo) {
     }
 
     *erro = true;
+}
+
+void exibe_fila(FilaEncadeada *fila) {
+    No no_auxiliar = fila->inicio;
+    int qtde_elementos = fila->qtde_elementos;
+
+    while (qtde_elementos > 0) {
+        cout << no_auxiliar->valor << endl;
+
+        no_auxiliar = no_auxiliar->proximo;
+
+        --qtde_elementos;
+    }
 }

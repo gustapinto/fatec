@@ -22,6 +22,8 @@ void empilhar(PilhaEncadeada *pilha, bool *erro, int valor_adicionado) {
 
     if (no_auxiliar == NULL) {
         *erro = true;
+
+        free(no_auxiliar);
     } else {
         no_auxiliar->valor = valor_adicionado;
 
@@ -32,8 +34,6 @@ void empilhar(PilhaEncadeada *pilha, bool *erro, int valor_adicionado) {
 
         *erro = false;
     }
-
-    free(no_auxiliar);
 }
 
 void desempilhar(PilhaEncadeada *pilha, bool *erro, int *auxiliar) {

@@ -54,8 +54,6 @@ void empilhar(PilhaEncadeada *pilha, bool *erro, int valor_adicionado) {
 
         *erro = false;
     }
-
-    free(no_auxiliar);
 }
 
 void desempilhar(PilhaEncadeada *pilha, bool *erro, int *auxiliar) {
@@ -69,4 +67,17 @@ void desempilhar(PilhaEncadeada *pilha, bool *erro, int *auxiliar) {
     }
 
     *erro = true;
+}
+
+void exibe_pilha(PilhaEncadeada *pilha) {
+    No no_auxiliar = pilha->topo;
+    int qtde_elementos = pilha->qtde_elementos;
+
+    while (qtde_elementos > 0) {
+        cout << no_auxiliar->valor << endl;
+
+        no_auxiliar = no_auxiliar->proximo;
+
+        --qtde_elementos;
+    }
 }
