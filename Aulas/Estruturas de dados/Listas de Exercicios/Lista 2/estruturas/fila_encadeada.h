@@ -64,7 +64,7 @@ void sair(FilaEncadeada *fila, bool *erro, int *valor_saindo) {
 }
 
 void exibe_fila(FilaEncadeada *fila) {
-    No no_auxiliar = fila->inicio;
+    NoFila *no_auxiliar = fila->inicio;
     int qtde_elementos = fila->qtde_elementos;
 
     while (qtde_elementos > 0) {

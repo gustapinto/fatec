@@ -15,17 +15,11 @@ void inverte_fila(
 
     while (! fila_esta_vazia(fila_original)) {
         sair(fila_original, erro, &auxiliar);
-
         empilhar(pilha, erro, auxiliar);
     }
 
     while (! esta_vazia(pilha)) {
         desempilhar(pilha, erro, &auxiliar);
-
-        // cout << auxiliar;
-
-        // cout << pilha->qtde_elementos << endl;
-
         entrar(fila_reordenada, erro, auxiliar);
     }
 }
@@ -47,5 +41,5 @@ int main() {
 
     inverte_fila(&fila, &fila_reordenada, &pilha, &erro);
 
-    // cout << fila_reordenada.qtde_elementos;
+    exibe_fila(&fila_reordenada);
 }

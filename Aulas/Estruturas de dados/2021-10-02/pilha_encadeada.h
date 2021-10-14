@@ -70,7 +70,7 @@ void desempilhar(PilhaEncadeada *pilha, bool *erro, int *auxiliar) {
 }
 
 void exibe_pilha(PilhaEncadeada *pilha) {
-    No no_auxiliar = pilha->topo;
+    No *no_auxiliar = pilha->topo;
     int qtde_elementos = pilha->qtde_elementos;
 
     while (qtde_elementos > 0) {
