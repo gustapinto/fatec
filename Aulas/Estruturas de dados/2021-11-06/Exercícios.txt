@@ -1,0 +1,15 @@
+1. Subgrafos são grafos cujos vértices e arestas sejam contidos em um subconjunto de um grafo principal, seguindo as regras de existência:
+    - G=(V, E) e G'=(V', E');
+    - V' contido em V;
+    - E' contido em E;
+    - G'=(V', E') é um grafo válido.
+
+2. Grafos bipartidos são aqueles cujos vértices podem ser claramente separados em dois conjunto V e U, sendo descrito por G=(V, U, E).
+
+3. Grafo conexo é aquele em que que se pode traçar um caminho entre cada um dos seus vértices V, tal que G=(V, E), já os grafos desconexos são os que não se pode percorrer um caminho entre cada um dos seus vértices.
+
+4. Grafos isomórficos ocorrem quando dois grafos distintos apresentam uma relação de bijeção de vértices, seguindo a regra de existência - f: V(G) -> V(H) - ou seja, são grafos que apresentam as mesmas arestas adjacentes mesmo que em formulações gráficas distintas.
+
+5. Grafo Hamiltoniano é o grafo que segue estritamente a regra de formação do ciclo Hamiltoniano, isso é, um grafo em que pelos seus vétices pode se formar um caminho que percorra a todos, passando apenas uma vez por cada.
+
+6. Grafo Euleriano é o grafo construído estritamente a partir da regra de formação de um ciclo Euleriano, ou seja, se trata de um grafo em que pode-se percorrer um caminho que passa por todas as suas arestas apenas uma vez, desconsiderando a repetição dos vértices para que esse caminho seja possível.
