@@ -1,0 +1,35 @@
+01. FOTO
+02.
+    int obtem_qtd_nos(No* raiz) {
+        if (raiz == NULL || (raiz->esq == NULL && raiz->dir == NULL)) {
+            return 0;
+        }
+
+        return 1 + obtem_qtd_nos(raiz->esq) + obtem_qtd_nos(raiz->dir);
+    }
+03. Número 4, FOTO
+04. A
+05. B
+06. C
+07. D
+08. E
+09.
+    - Bubble sort: é o mais simples de ser implementado, porém apresenta como desvantagem sua complexidade de grau O(n^2). Ele opera trocando elementos de posição iterativa ou recursivamente até que o maior elemento esteja no final do vetor, repetindo o processo até que todo o vetor esteja ordenado.
+    - Insertion sort: é um método vantajoso por ser também de implementação simplificada, mas assim como o bubble sort carrega a desvatagem de possuir complexidade O(n^2), Ele opera removendo um eleemnto por iteração e buscando o indíce a qual ele deveria pertencer.
+    - Selection sort: assim como os demais métodos é vantajoso por sua implementação simples, mas carrega a desvantagem de complexidade O(n^2), além de não ser tão eficiente por conta e depender de um algoritimo de busca auxiliar. Ele atua buscando o maior elemento do vetor e o inserindo no lugar ideial.
+    - Shell sort: ele opera de modo similar ao Insertion Sort, carregando as mesmas vantagens e desvantagens, como sua complexidade de grau O(n^2), como já mencionado ele atua igual ao Insertion Sort, porém utilizando-se de "saltos" para agilizar o melhor caso.
+    - Quick sort: tem como vantagem sua baixa complexidade O(n log n) porém possui implementação mais complexa e depende da criação de estruturas abstratas de mais dificuldade de construção, como árvores, além de que sua pior complexidade pode variar muito conforme o pivô escolhido. Ele opera dividindo o vetor principal em dois lados a partir de um valor pivô qualquer, um contendo os maiores valores e outro os menores, aglutinando todos esses na sua respectiva ordem ao final do algoritimo.
+    - Merge sort: atua de forma similar ao Quick Sort, trazendo consigo as vantagens e disvantagens do Quick Sort, porém mantendo uma complexidade mais constante de O(n log n), já que ao invés de escolher um pivô qualquer o Merge Sort sempre divide os vetores, esstabilando assim sua complexidade e tempo de execução para vetores muito grandes.
+10.
+    - Busca sequencial: tem por vantagens sua simples implementação e complexidade de O(n) que juntos tornam esse método eficiente em vetores pequenos, porém atuam de modo menos eficiente em vetores maiores. Opera porcorrendo todos os itens do vetor comparando-os com o valor buscado e retornando o indice desse valor.
+    - Busca binária: é vantajosa por conta de sua complexidade O(log n), porém apresenta como grande desvantagem o fato de só funcionar em vetores ordenados, podendo aumentar a complexidade do contexto em que está inserida caso o vetor preciser ser ordenado. Ela atua comparando o elemento buscado com o meio do vetor, obtendo-o se for igual e dividindo o vetor em dois caso não seja, buscando no lado esquerdo caso o elemento buscado for menor e no lado direito cao for maior, repetindo o processo até encontrar o indice.
+    - Tabela hash: sua principal vantagem é a facilidade de acesso dos dados e sua baixa complexidade de busca, O(1), em casos médios, porém apresentando uma maior complexidade nos piores casos, podendo chegar até O(n), outra desvantagem é o fato de precisar de um método de hashing auxiliar. Ela atua atribuindo indices para os valores de um vetor, permitindo que esses sejam facilmente acessados e buscados.
+    - Busca em largura: apresenta como vantagem uma complexidade média de O(1), sua principal desvatagem é o fato de utiliar-se de estrturas de dados mais complexas como grafos e árvores para realizar a busca. Atua iterando sobre a "largura" de um grafo ou árvore, buscando o valor desejado e retornando o Nó a qual ele pertence.
+    - Busca em profundidade: atua como a busca em largura, porém iterando primariamente sob a altura dos nós até suas folhas e não sobre a largura do grafo ou da árvore, possibilitando que a mesma encontre mais facilmente o valor desejado em uma complexidade que pode variar de O(1) a O(n).
+11. Grafo Hamiltoniano é o grafo que segue estritamente a regra de formação do ciclo Hamiltoniano, isso é, um grafo em que pelos seus vétices pode se formar um caminho que percorra a todos, passando apenas uma vez por cada. Já o Grafo Euleriano é o grafo construído estritamente a partir da regra de formação de um ciclo Euleriano, ou seja, se trata de um grafo em que pode-se percorrer um caminho que passa por todas as suas arestas apenas uma vez, desconsiderando a repetição dos vértices para que esse caminho seja possível.
+12.a. Ordem 10.
+12.b. Não, pois esse grafo possui arestas que conectam mais de uma aresta.
+12.c. Ele teria 45 arestas.
+12.d. É um grafo irregular pois nem todos os vértices possuem o mesmo grau.
+12.e. Caminho Hamiltoniano: A B C D E F G J K
+      Caminho Euleriano: A B C D H G F E F K J I
