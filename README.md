@@ -19,5 +19,5 @@ Uma breve coleção de exercícios, exemplos, diagramas, aprendizados e gambiarr
 - [Matemática para computação](https://github.com/gustapinto/fatec/tree/main/Aulas/Matem%C3%A1tica%20discreta)  
 - [Técnicas de programação 1](https://github.com/gustapinto/fatec/tree/main/Aulas/T%C3%A9cnicas%20de%20programa%C3%A7%C3%A3o%201)  
 
-## Terceiro semestre
+### Terceiro semestre
 - [Técnicas de programação 2](https://github.com/gustapinto/fatec/tree/main/Aulas/T%C3%A9cnicas%20de%20programa%C3%A7%C3%A3o%202)  
