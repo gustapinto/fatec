@@ -27,6 +27,7 @@ services:
     image: openjdk:11
     volumes:
       - ./Técnicas de programação 1/:/scripts/java/tecnicas_1/
+      - ./Técnicas de programação 2/:/scripts/java/tecnicas_2/
     working_dir: /scripts/java
     tty: true
 
