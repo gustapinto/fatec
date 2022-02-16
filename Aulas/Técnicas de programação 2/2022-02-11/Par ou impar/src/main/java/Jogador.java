@@ -43,6 +43,10 @@ public class Jogador {
         input.close();
     }
 
+    public void setJogada(int jogada) {
+        this.jogada = jogada;
+    }
+
     public int getJogada() {
         return this.jogada;
     }
@@ -65,7 +69,7 @@ public class Jogador {
         return this.nome;
     }
 
-    public void mostraEscolha() {
+    private void mostraEscolha() {
         String escolhaTexto = (this.escolha == 1) ? "Impar" : "Par";
 
         System.out.println(this.nome + " escolheu: " + escolhaTexto)

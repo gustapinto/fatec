@@ -10,5 +10,8 @@ public class Main {
 
         usuario.setEscolha();
         maquina.setEscolha(usuario.getEscolha());
+
+        usuario.setJogada();
+        maquina.setJogada();
     }
 }
