@@ -21,3 +21,4 @@ Uma breve coleção de exercícios, exemplos, diagramas, aprendizados e gambiarr
 
 ### Terceiro semestre
 - [Técnicas de programação 2](https://github.com/gustapinto/fatec/tree/main/Aulas/T%C3%A9cnicas%20de%20programa%C3%A7%C3%A3o%202)  
+- [Desenvolvimento web 3](https://github.com/gustapinto/fatec/tree/main/Aulas/Desenvolvimento%20web%203)  
