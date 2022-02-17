@@ -4,6 +4,7 @@ public class Main {
     public static void main(String []args) {
         Jogador usuario = new Jogador();
         Jogador maquina = new Jogador();
+        Random rand = new Random();
 
         usuario.setNome();
         maquina.setNome("Computador");
@@ -12,9 +13,8 @@ public class Main {
         maquina.setEscolha(usuario.getEscolha());
 
         usuario.setJogada();
-
-        Random rand = new Random();
-
         maquina.setJogada(rand.nextInt(10));
+
+        maquina.infoGanhador(usuario);
     }
 }

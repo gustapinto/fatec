@@ -8,15 +8,13 @@ public class Jogador {
     public void setEscolha() {
         Scanner input = new Scanner(System.in);
 
-        while (this.escolha != 0 && this.escolha != 1) {
+        do {
             System.out.println("Escolha: ");
             System.out.println("0 - Par");
             System.out.println("1 - Impar");
 
             this.escolha = input.nextInt();
-        }
-
-        input.close();
+        } while (this.escolha != 0 && this.escolha != 1);
 
         this.mostraEscolha();
     }
@@ -38,11 +36,13 @@ public class Jogador {
 
         this.jogada = input.nextInt();
 
-        input.close();
+        this.mostraJogada();
     }
 
     public void setJogada(int jogada) {
         this.jogada = jogada;
+
+        this.mostraJogada();
     }
 
     public int getJogada() {
@@ -55,8 +55,6 @@ public class Jogador {
         System.out.println("Nome: ");
 
         this.nome = input.next();
-
-        input.close();
     }
 
     public void setNome(String nome) {
@@ -67,9 +65,20 @@ public class Jogador {
         return this.nome;
     }
 
+    public void infoGanhador(Jogador jogador) {
+        int resultado = (this.jogada + jogador.jogada) % 2;
+        String ganhador = resultado == this.escolha ? this.nome : jogador.nome;
+
+        System.out.println("O jogador " + ganhador + " ganhou!");
+    }
+
     private void mostraEscolha() {
         String escolhaTexto = (this.escolha == 1) ? "Impar" : "Par";
 
         System.out.println(this.nome + " escolheu: " + escolhaTexto);
+    }
+
+    private void mostraJogada() {
+        System.out.println(this.nome + " jogou: " + this.jogada);
     }
 }
