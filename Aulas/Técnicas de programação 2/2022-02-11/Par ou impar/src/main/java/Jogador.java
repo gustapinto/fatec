@@ -1,5 +1,3 @@
-package parimpar;
-
 import java.util.Scanner;
 
 public class Jogador {
@@ -20,13 +18,13 @@ public class Jogador {
 
         input.close();
 
-        this.mostraEscolha()
+        this.mostraEscolha();
     }
 
     public void setEscolha(int escolha) {
-        this.escolha = (escolha == 1) ? 0 : 1
+        this.escolha = (escolha == 1) ? 0 : 1;
 
-        this.mostraEscolha()
+        this.mostraEscolha();
     }
 
     public int getEscolha() {
@@ -72,6 +70,6 @@ public class Jogador {
     private void mostraEscolha() {
         String escolhaTexto = (this.escolha == 1) ? "Impar" : "Par";
 
-        System.out.println(this.nome + " escolheu: " + escolhaTexto)
+        System.out.println(this.nome + " escolheu: " + escolhaTexto);
     }
 }

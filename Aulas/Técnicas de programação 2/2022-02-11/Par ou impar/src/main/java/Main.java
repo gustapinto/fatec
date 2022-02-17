@@ -1,4 +1,4 @@
-package parimpar;
+import java.util.Random;
 
 public class Main {
     public static void main(String []args) {
@@ -12,6 +12,9 @@ public class Main {
         maquina.setEscolha(usuario.getEscolha());
 
         usuario.setJogada();
-        maquina.setJogada();
+
+        Random rand = new Random();
+
+        maquina.setJogada(rand.nextInt(10));
     }
 }
