@@ -28,7 +28,7 @@ class Fatec:
 
     def add_disciplina(self, nome_curso, disciplina, ementa):
         for curso in self.cursos:
-            if curso.curso.lower() != nome_curso:
+            if curso.curso != nome_curso.upper():
                 continue
 
             curso.add_disciplina(disciplina, ementa)
