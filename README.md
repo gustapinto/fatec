@@ -23,3 +23,4 @@ Uma breve coleção de exercícios, exemplos, diagramas, aprendizados e gambiarr
 - [Técnicas de programação 2](https://github.com/gustapinto/fatec/tree/main/Aulas/T%C3%A9cnicas%20de%20programa%C3%A7%C3%A3o%202)  
 - [Desenvolvimento web 3](https://github.com/gustapinto/fatec/tree/main/Aulas/Desenvolvimento%20web%203)  
 - [Gestão de projetos ágeis](https://github.com/gustapinto/fatec/tree/main/Aulas/Gest%C3%A3o%20de%20projetos%20%C3%A1geis)  
+- [Interação humano computador](https://github.com/gustapinto/fatec/tree/main/Aulas/Intera%C3%A7%C3%A3o%20humano%20computador)  
