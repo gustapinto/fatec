@@ -4,21 +4,21 @@ services:
   fatec_cpp:
     image: gcc:11.1-bullseye
     volumes:
-      - ./Algoritimos e Lógica de Programação/C++/:/scripts/cpp/algoritimos/
-      - ./Estruturas de dados/:/scripts/cpp/estruturas_de_dados/
+      - ./Algoritimos e Lógica de Programação/C++/:/scripts/cpp/algoritimos/:Z
+      - ./Estruturas de dados/:/scripts/cpp/estruturas_de_dados/:Z
     working_dir: /scripts/cpp
     tty: true
 
   fatec_mariadb:
-    image: mariadb
+    image: mariadb:10.8
     command: --default-authentication-plugin=mysql_native_password
     restart: unless-stopped
     ports:
       - 3306:3306
     volumes:
-      - ./database/:/var/lib/mysql/
-      - ./Bancos de dados relacionais/:/scripts/mysql/bancos_relacionais/
-      - ./Modelagem de Bancos de Dados/SQL/:/scripts/mysql/modelagem_de_bancos/
+      - ./database/:/var/lib/mysql/:Z
+      - ./Bancos de dados relacionais/:/scripts/mysql/bancos_relacionais/:Z
+      - ./Modelagem de Bancos de Dados/SQL/:/scripts/mysql/modelagem_de_bancos/:Z
     working_dir: /scripts/mysql
     environment:
       MYSQL_ROOT_PASSWORD: example
@@ -26,8 +26,8 @@ services:
   fatec_java:
     image: openjdk:11
     volumes:
-      - ./Técnicas de programação 1/:/scripts/java/tecnicas_1/
-      - ./Técnicas de programação 2/:/scripts/java/tecnicas_2/
+      - ./Técnicas de programação 1/:/scripts/java/tecnicas_1/:Z
+      - ./Técnicas de programação 2/:/scripts/java/tecnicas_2/:Z
     working_dir: /scripts/java
     tty: true
 
@@ -38,8 +38,8 @@ services:
     ports:
       - 80:80
     volumes:
-      - ./Desenvolvimento web 2/:/var/www/
-      - ./Desenvolvimento web 2/:/var/www/html/
+      - ./Desenvolvimento web 2/:/var/www/:Z
+      - ./Desenvolvimento web 2/:/var/www/html/:Z
     tty:
       true
 
@@ -48,6 +48,6 @@ services:
     tty: true
     working_dir: /scripts/python/dev_3/
     volumes:
-      - ./Desenvolvimento web 3/:/scripts/python/dev_3/
+      - ./Desenvolvimento web 3/:/scripts/python/dev_3/:Z
     ports:
       - 8000:8000
