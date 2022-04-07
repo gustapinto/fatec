@@ -42,3 +42,12 @@ services:
       - ./Desenvolvimento web 2/:/var/www/html/
     tty:
       true
+
+  fatec_python:
+    image: python:3.10-alpine
+    tty: true
+    working_dir: /scripts/python/dev_3/
+    volumes:
+      - ./Desenvolvimento web 3/:/scripts/python/dev_3/
+    ports:
+      - 8000:8000
