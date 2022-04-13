@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>
+    Feriado de {{ feriado }}
+  </title>
+
+  <style>
+    .center {
+      display: grid;
+      height: 100vh;
+      place-items: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="center">
+    <h1>
+      {% if valor %}
+      É feriado de {{ feriado }}
+      {% else %}
+      Não é feriado de {{ feriado }}
+      {% endif %}
+    </h1>
+  </div>
+</body>
+</html>

@@ -1,12 +1,28 @@
-from datetime import date
+from .utils import contexto_feriado
 
 from django.shortcuts import render
 
 
 def natal(request):
-    data_hoje = date.today()
-    hoje_e_natal = (data_hoje.day == 25 and data_hoje.month == 12)
+    ctx = contexto_feriado('Natal', 25, 12)
+    return render(request, 'feriado.html', ctx)
 
-    contexto = {'natal': hoje_e_natal}
 
-    return render(request, 'natal.html', contexto)
+def tiradentes(request):
+    ctx = contexto_feriado('Tiradentes', 21, 4)
+    return render(request, 'feriado.html', ctx)
+
+
+def ano_novo(request):
+    ctx = contexto_feriado('Ano novo', 31, 1)
+    return render(request, 'feriado.html', ctx)
+
+
+def proclamacao_da_republica(request):
+    ctx = contexto_feriado('Proclamação da república', 15, 11)
+    return render(request, 'feriado.html', ctx)
+
+
+def dia_do_trabalho(request):
+    ctx = contexto_feriado('Dia do trabalho', 1, 5)
+    return render(request, 'feriado.html', ctx)
