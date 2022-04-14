@@ -1,58 +1,28 @@
-from abc import ABC
+from datetime import datetime
 
 from django.test import TestCase
 
+from .models import FeriadoModel
 
-class NatalTest(TestCase):
+
+class FeriadoModelTest(TestCase):
     def setUp(self):
-        self.resp = self.client.get('/')
+        self.feriado = 'Natal'
+        self.mes = 12
+        self.dia = 25
 
-    def test_200_response(self):
-        self.assertEqual(200, self.resp.status_code)
+        self.cadastro = FeriadoModel(nome=self.feriado, dia=self.dia,
+                                     mes=self.mes)
+        self.cadastro.save()
 
-    def test_texto(self):
-        self.assertContains(self.resp, 'Natal')
+    def test_created(self):
+        self.assertTrue(FeriadoModel.objects.exists())
 
+    def test_modificado_em(self):
+        self.assertIsInstance(self.cadastro.modificado_em, datetime)
 
-class TiradentesTest(TestCase):
-    def setUp(self):
-        self.resp = self.client.get('/tiradentes')
+    def test_nome_feriado(self):
+        self.assertEqual(self.cadastro.nome, self.feriado)
 
-    def test_200_response(self):
-        self.assertEqual(200, self.resp.status_code)
-
-    def test_texto(self):
-        self.assertContains(self.resp, 'Tiradentes')
-
-
-class AnoNovoTest(TestCase):
-    def setUp(self):
-        self.resp = self.client.get('/ano_novo')
-
-    def test_200_response(self):
-        self.assertEqual(200, self.resp.status_code)
-
-    def test_texto(self):
-        self.assertContains(self.resp, 'Ano novo')
-
-
-class ProclamacaoDaRepublicaTest(TestCase):
-    def setUp(self):
-        self.resp = self.client.get('/proclamacao_da_republica')
-
-    def test_200_response(self):
-        self.assertEqual(200, self.resp.status_code)
-
-    def test_texto(self):
-        self.assertContains(self.resp, 'Proclamação da república')
-
-
-class DiaDoTrabalhoTest(TestCase):
-    def setUp(self):
-        self.resp = self.client.get('/dia_do_trabalho')
-
-    def test_200_response(self):
-        self.assertEqual(200, self.resp.status_code)
-
-    def test_texto(self):
-        self.assertContains(self.resp, 'Dia do trabalho')
+    def test_dia_feriado(self):
+        self.assertEqual(self.cadastro.dia, self.dia)
