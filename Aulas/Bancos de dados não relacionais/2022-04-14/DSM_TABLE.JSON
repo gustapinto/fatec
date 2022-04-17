@@ -1,0 +1,197 @@
+[
+  {
+    "Nome": "Rodnei",
+    "Endereço": 670,
+    "Telefone": 19345600980,
+    "Email": "obrabo@gmail.com",
+    "Gênero": "Feminino",
+    "Nascimento": "10/05/89",
+    "CEP": 13456773,
+    "Estado Civil": "Casado"
+  },
+  {
+    "Nome": "Cleber",
+    "Endereço": "Av. Do Repolho, Nº80, Jardim Batista",
+    "Telefone": 19999999999,
+    "Email": "e@mail.com",
+    "Gênero": "Masculino",
+    "Nascimento": "20/04/2002",
+    "Profissão": "Auxiliar",
+    "CEP": 13616410,
+    "Estado Civil": "Solteiro"
+  },
+  {
+    "Nome": "Cleiton",
+    "Endereço": "9966 Vance Knolls Suite 673 - Bristol, NJ / 72185",
+    "Telefone": 19899889124,
+    "Email": "clei@ton.com",
+    "Gênero": "Masculino",
+    "Nascimento": "12/03/2021",
+    "Profissão": "Suporte",
+    "CEP": 13616410
+  },
+  {
+    "Nome": "LUIS",
+    "Endereço": "",
+    "Telefone": 19988745632,
+    "Email": "pessoa@yahoo.com"  
+  },
+  {
+    "Nome": "Epaminondas",
+    "Telefone": 19912365478,
+    "Email": "etevaldo@hotmail.com",
+    "Gênero": "Masculino",
+    "Profissão": "Pizzaziolo",
+    "Estado Civil": "Solteiro"
+  },
+  {
+    "Nome": "Jp",
+    "Telefone": 19997899599,
+    "Email": "joaopedrobhz@gmail.com",
+    "Gênero": "Masculino",
+    "Nascimento": "19/11/2002",
+    "Profissão": "Suporte",
+    "CEP": 13616410,
+    "Estado Civil": "Solteiro"
+  },
+  {
+    "Nome": "Josué",
+    "Endereço": "Rua 8 de abril, 78",
+    "Telefone": 161234566789,
+    "Email": "josuesilva@gmail.com",
+    "Gênero": "Masculino",
+    "Nascimento": "09/03/1998",
+    "CEP": 13508392,
+    "Estado Civil": "Casado"
+  },
+  {
+    "Nome": "Vitor pereira",
+    "Endereço": "Av. Dr. Nelson d' Ávila 296",
+    "Telefone": 19998999898,
+    "Email": "oemail@arroba.com",
+    "Gênero": "Não definido"
+  },
+  {
+    "Nome": "Roberval",
+    "Endereço": "Centro",
+    "Telefone": 19999945465,
+    "Email": "oemail@arroba.com",
+    "Gênero": "Masculino",
+    "Nascimento": "03/08/1994",
+    "Profissão": "Carteiro",
+    "CEP": 13848989,
+    "Estado Civil": "Solteiro"
+  },
+  {
+    "Nome": "Felipe",
+    "Endereço": "Rua Dolores, Nº40, Jardim Presidente",
+    "Telefone": 19997293841,
+    "Email": "flp044@gmail.com",
+    "Gênero": "Masculino",
+    "Nascimento": "20/05/2000",
+    "Profissão": "DBA",
+    "CEP": 13617754,
+    "Estado Civil": "Casado"
+  },
+  {
+    "Nome": "João",
+    "Endereço": "Rua: 13 de Maio, 745 - centro",
+    "Telefone": "19 999999999",
+    "Email": "joao@joao.com",
+    "Gênero": "Masculino",
+    "Nascimento": "11/08/2001"
+  },
+  {
+    "Nome": "Deyverson",
+    "Endereço": "Av. Francisco Matarazzo",
+    "Telefone": "11 48006688",
+    "Email": "deyvershow@gmail.com",
+    "Gênero": "Masculino",
+    "Nascimento": "08/05/1991",
+    "Profissão": "Jogador de futebol",
+    "CEP": 135749374,
+    "Estado Civil": "Casado"
+  },
+  {
+    "Nome": "Leôncio",
+    "Endereço": "Av. Do Repolho, Nº80, Jardim Batista",
+    "Email": "leticia@gmail.com",
+    "Gênero": "Feminino"
+      },
+  {
+    "Nome": "Dolores",
+    "Telefone": 1995556332,
+    "Estado Civil": "Solteiro"
+  },
+  {
+    "Nome": "Girafales",
+    "Endereço": "Rua Batatinhas",
+    "Telefone": 1966574125,
+    "Gênero": "Masculino"
+  },
+  {
+    "Nome": "Pedro",
+    "Endereço": "Av: Da Saudade, 60, Centro",
+    "Telefone": "19 123456789",
+    "Email": "pedro@pedro.com",
+    "Gênero": "Masculino",
+    "Profissão": "Pedreiro",
+    "Estado Civil": "Casado"
+  },
+  {
+    "Nome": "Carlos",
+    "Endereço": "Centrão",
+    "Telefone": 19967897645,
+    "Email": "carlos@carlos.com",
+    "Gênero": "Masculino",
+    "Nascimento": "01/01/1978",
+    "Profissão": "Casado",
+    "CEP": 1361798,
+
+  },
+  {
+    "Nome": "José",
+    "Endereço": "Pq. das Arvores",
+    "Telefone": 19854567485,
+    "Email": "josé.6@hotmail.com",
+    "Gênero": "Masculino",
+    "Nascimento": "01/09/03",
+    "Profissão": "Caçador de casados",
+    "CEP": 13245678,
+
+  },
+  {
+    "Nome": "Arnaldo",
+    "Endereço": "Rua João da Costa, 348",
+    "Telefone": 11987654321,
+    "Gênero": "Masculino",
+    "Nascimento": "09/12/2000",
+    "Profissão": "Comentarista",
+  },
+  {
+    "Nome": "Luiz",
+    "Endereço": "Rua Tiradentes, 735",
+    "Telefone": "11 9 96562363",
+    "Email": "luiz@fatec.com",
+    "Gênero": "Masculino",
+    "Nascimento": "02/03/1197",
+    "CEP": 13666666,
+    "Estado Civil": "Solteiro"
+  },
+  {
+    "Nome": "Vitor",
+    "Endereço": "Avenida 29",
+    "Telefone": "19 963258741",
+    "Email": "email@email.com",
+    "Gênero": "Masculino",
+    "Nascimento": "05/08/1950",
+    "Estado Civil": "Casado"
+  },
+  {
+    "Nome": "Amanda",
+    "Endereço": "Rua do Alface Verde, 229",
+    "Email": "amanda@gmail.com",
+    "Gênero": "Feminino",
+    "Estado Civil": "Solteiro"
+  }
+]
