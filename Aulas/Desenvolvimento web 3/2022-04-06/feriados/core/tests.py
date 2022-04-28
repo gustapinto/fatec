@@ -26,3 +26,6 @@ class FeriadoModelTest(TestCase):
 
     def test_dia_feriado(self):
         self.assertEqual(self.cadastro.dia, self.dia)
+
+    def test_mes_feriado(self):
+        self.assertEqual(self.cadastro.mes, self.mes)

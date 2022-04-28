@@ -14,5 +14,6 @@ def feriado(request):
         feriado = None
 
     msg = f'Hoje é {feriado}' if feriado else 'Hoje não é feriado'
+    titulo = feriado or 'nada'
 
-    return render(request, 'feriado.html', {'msg': msg, 'title'})
+    return render(request, 'feriado.html', {'msg': msg, 'title': titulo})
