@@ -37,9 +37,11 @@ services:
       dockerfile: Dockerfile_php_apache
     ports:
       - 80:80
+      - 4000:4000
     volumes:
       - ./Desenvolvimento web 2/:/var/www/:Z
       - ./Desenvolvimento web 2/:/var/www/html/:Z
+      - ./Bancos de dados não relacionais/:/banco_de_dados_nao_relacionais/:Z
     tty:
       true
 
