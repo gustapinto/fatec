@@ -9,13 +9,9 @@ CREATE TABLE `users` (
 CREATE TABLE `tasks` (
   `taskid` int(11) NOT NULL AUTO_INCREMENT,
   `username` varchar(20) NOT NULL,
-  `task` varchar(100) NOT NULL,
   `done` tinyint(4) DEFAULT NULL,
+  `task` json NOT NULL,
+  CHECK (JSON_VALID(`task`)),
   PRIMARY KEY (`taskid`),
-  -- KEY `username_idx` (`username`),
   CONSTRAINT `username` FOREIGN KEY (`username`) REFERENCES `users` (`username`)
 );
-
-ALTER TABLE `tasks` ADD COLUMN tags varchar(255);
-
-ALTER TABLE `tasks` ADD COLUMN note TEXT;

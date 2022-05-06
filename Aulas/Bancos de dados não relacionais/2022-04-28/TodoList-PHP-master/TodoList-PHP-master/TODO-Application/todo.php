@@ -20,11 +20,14 @@
     {
         if(!empty($_POST['description']))
         {
-            $title = $_POST['description'];
-            $note = $_POST['note'];
-            $tags = $_POST['tags'];
+            $todo = [
+                'title' => $_POST['description'],
+                'note' => $_POST['note'],
+                'tags' => explode(',', $_POST['tags']),
+                'type' => 1,
+            ];
 
-            addTodoItem($_SESSION['username'], $title, $note, $tags);
+            addTodoItem($_SESSION['username'], $todo);
             header("Refresh:0");
         }
     }
@@ -51,5 +54,7 @@
 </html>
 
 <?php
-    getTodoItems($username);
+    $sql = "SELECT * FROM tasks WHERE username = '".$username."' AND JSON_EXTRACT(`task`, '$.type')=1";
+
+    getTodoItems($username, $sql);
  ?>

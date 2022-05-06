@@ -147,18 +147,15 @@
         }
     }
     
-    function getTodoItems($username) {
+    function getTodoItems($username, $sql) {
 
         $conn = connectdatabase();
-        $sql = "SELECT * FROM tasks WHERE username = '".$username."'";
-        
         $result = mysqli_query($conn, $sql);
 
         echo "<form method='POST'>";
         echo "<pre>";
         if ($result and mysqli_num_rows($result) > 0) {
             while($row = mysqli_fetch_assoc($result)) {
-
                 spaces(15);
                 if($row['done']) {
                     echo "<input type='checkbox' checked class='largerCheckbox' name='check_list[]' value='".$row["taskid"] ."'>";
@@ -166,9 +163,20 @@
                 else {
                     echo "<input type='checkbox' class='largerCheckbox' name='check_list[]' value='".$row["taskid"] ."'>";
                 }
-                echo "<td> " . $row["task"] . "</td>";
-                echo "<td> " . $row["note"] . "</td>";
-                echo "<td> " . $row["tags"] . "</td>";
+
+                $task = json_decode($row['task']);
+
+                foreach ($task as $key => $element) {
+                    if ($key == 'type') {
+                        continue;
+                    }
+
+                    if (is_array($element)) {
+                        echo "<td> [" . join('][', $task->tags) . "]</td>";
+                    } else {
+                        echo "<td> " . $element . "</td>";
+                    }
+                }
                 echo "<br>";
             }
         }
@@ -182,10 +190,11 @@
         mysqli_close($conn);
     }
 
-    function addTodoItem($username, $todo_text, $note, $tags)
+    function addTodoItem($username, $todo)
     {
+        $task = json_encode($todo);
         $conn = connectdatabase();
-        $sql = "INSERT INTO todo.tasks(username, task, done, note, tags) VALUES ('".$username."','".$todo_text."',0,'".$note."','".$tags."');";
+        $sql = "INSERT INTO todo.tasks(username, task) VALUES ('".$username."','".$task."');";
         $result = mysqli_query($conn, $sql);
         mysqli_close($conn);
     }
