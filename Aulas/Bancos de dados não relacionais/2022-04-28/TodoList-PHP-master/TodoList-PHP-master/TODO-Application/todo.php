@@ -11,7 +11,9 @@
 
     echo '<a href="changepassword.php" align="right" title="change password" style="color: blue; text-decoration: none">&nbsp; Change Password </a>';
 
-    echo '<a href="deleteaccount.php" align="right" title="delete account" style="color: blue; text-decoration: none">&nbsp; Delete Account </a> <br>';
+    echo '<a href="deleteaccount.php" align="right" title="delete account" style="color: blue; text-decoration: none">&nbsp; Delete Account </a>';
+
+    echo '<a href="todo2.php" align="right" title="delete account" style="color: blue; text-decoration: none">&nbsp; Todo 2</a> <br/>';
 
     error();
     echo "<br> <center id='user'> Welcome ".ucwords($username)."</center> <br>";
