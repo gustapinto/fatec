@@ -1,0 +1,19 @@
+{
+    "nome": "",
+    "data_nascimento": "",
+    "sexo": "",
+    "possui_documento": false,
+    "numero_documento": "",
+    "origem": {
+        "cidade": "",
+        "estado": "",
+        "pais": ""
+    },
+    "abrigo": {
+        "abrigada": false,
+        "codigo": "",
+        "cidade": "",
+        "estado": "",
+        "pais": ""
+    }
+}
