@@ -1,3 +1,9 @@
-/Aulas/Técnicas de programação 1/2021-11-26/target/
-/Aulas/Técnicas de programação 2/2022-03-04/monstroFactory/target/
-/Aulas/Técnicas de programação 2/2022-03-04/pizzaFactory/target/
+database/
+**/html/
+*.class
+.idea/
+**/Binarios/
+*.~lock*
+Estruturas de dados/**/core
+__pycache__/
+.pytest_cache/

@@ -1,9 +1,0 @@
-database/
-**/html/
-*.class
-.idea/
-**/Binarios/
-*.~lock*
-Estruturas de dados/**/core
-__pycache__/
-.pytest_cache/
