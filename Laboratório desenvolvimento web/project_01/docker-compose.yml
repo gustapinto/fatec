@@ -1,0 +1,9 @@
+version: "3.6"
+
+services:
+  node:
+    image: node:18
+    tty: true
+    volumes:
+      - ./:/dsw_project_01:Z
+    working_dir: /dsw_project_01
