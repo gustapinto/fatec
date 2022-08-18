@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "@types/module-alias": "^2.0.1",
     "@types/node": "^18.7.6",
     "module-alias": "^2.2.2",
     "typescript": "^4.7.4"
@@ -13,6 +14,8 @@
   },
   "devDependencies": {},
   "scripts": {
+    "build": "tsc",
+    "start": "yarn build && node dist/teste.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
