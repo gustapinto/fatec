@@ -1,0 +1,2 @@
+fmt:
+	astyle ./**/*.cpp
