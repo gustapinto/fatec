@@ -10,6 +10,7 @@
         "node"
     ],
     "extensions": [
-        "ms-vscode.vscode-typescript-next"
+        "ms-vscode.vscode-typescript-next",
+        "dbaeumer.vscode-eslint"
     ]
 }
