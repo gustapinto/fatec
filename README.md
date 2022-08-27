@@ -24,3 +24,9 @@ Uma breve coleção de exercícios, exemplos, diagramas, aprendizados e gambiarr
 - [Desenvolvimento web 3](https://github.com/gustapinto/fatec/tree/main/Aulas/Desenvolvimento%20web%203)  
 - [Gestão de projetos ágeis](https://github.com/gustapinto/fatec/tree/main/Aulas/Gest%C3%A3o%20de%20projetos%20%C3%A1geis)  
 - [Interação humano computador](https://github.com/gustapinto/fatec/tree/main/Aulas/Intera%C3%A7%C3%A3o%20humano%20computador)  
+- [Bancos de dados não relacionais](https://github.com/gustapinto/fatec/tree/main/Bancos%20de%20dados%20n%C3%A3o%20relacionais)  
+
+### Quarto semestre
+- [Internet das coisas e suas aplicações](https://github.com/gustapinto/fatec/tree/main/Internet%20das%20coisas%20e%20suas%20aplica%C3%A7%C3%B5es)
+- [Laboratório de desenvolvimento web](https://github.com/gustapinto/fatec/tree/main/Laborat%C3%B3rio%20desenvolvimento%20web)
+- [Programação para dispositivos móveis 1](https://github.com/gustapinto/fatec/tree/main/Programa%C3%A7%C3%A3o%20para%20dispositivos%20m%C3%B3veis%201)
