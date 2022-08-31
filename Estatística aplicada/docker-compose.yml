@@ -1,0 +1,12 @@
+version: "3.6"
+
+services:
+  python:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./:/estatistica_aplicada:Z
+    working_dir: /estatistica_aplicada
+    tty: True
+
