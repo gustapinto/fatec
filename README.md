@@ -30,3 +30,4 @@ Uma breve coleção de exercícios, exemplos, diagramas, aprendizados e gambiarr
 - [Internet das coisas e suas aplicações](https://github.com/gustapinto/fatec/tree/main/Internet%20das%20coisas%20e%20suas%20aplica%C3%A7%C3%B5es)
 - [Laboratório de desenvolvimento web](https://github.com/gustapinto/fatec/tree/main/Laborat%C3%B3rio%20desenvolvimento%20web)
 - [Programação para dispositivos móveis 1](https://github.com/gustapinto/fatec/tree/main/Programa%C3%A7%C3%A3o%20para%20dispositivos%20m%C3%B3veis%201)
+- [Estatística aplicada](https://github.com/gustapinto/fatec/tree/main/Estat%C3%ADstica%20aplicada)
