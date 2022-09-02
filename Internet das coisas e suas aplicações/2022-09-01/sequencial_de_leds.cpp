@@ -13,7 +13,7 @@ void pisca_led(int led) {
     delay(250);
 }
 
-void ativa_leds(int nivel) {
+void atua_leds(int nivel) {
     for (int led = 2; led <= 5; ++led) {
         digitalWrite(led, nivel);
     }
@@ -56,10 +56,10 @@ void loop() {
         sequencial(true);
         break;
     case 'b':
-        ativa_leds(LOW);
+        atua_leds(LOW);
         break;
     case 'c':
-        ativa_leds(HIGH);
+        atua_leds(HIGH);
         break;
     case 'd':
         sequencial(false);
