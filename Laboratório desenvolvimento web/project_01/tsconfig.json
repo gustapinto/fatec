@@ -20,19 +20,22 @@
       "baseUrl": ".",
       "paths": {
         "@src/*": ["./src/*"],
-        "@test/*": ["./test/*"]
+        "@test/*": ["./test/*"],
+        "@static/*": ["./static/*"]
       },
       "rootDirs": [
         "./src",
-        "./test"
+        "./test",
+        "./static"
       ],
       "experimentalDecorators": true,
       "emitDecoratorMetadata": true
     },
     "include": [
       "./src/**/*.ts",
-      "./test/**/*.ts"
-, "test/jest.config.ts"    ],
+      "./test/**/*.ts",
+      "test/jest.config.ts"
+    ],
     "exclude": [
       "./node_modules/*",
       "dist"
