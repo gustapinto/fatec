@@ -1,0 +1,11 @@
+version: "3.6"
+
+services:
+  node:
+    image: node:18
+    tty: true
+    volumes:
+      - ./:/dsw_projeto_api_git:Z
+    ports:
+      - 3000:3000
+    working_dir: /dsw_projeto_api_git
