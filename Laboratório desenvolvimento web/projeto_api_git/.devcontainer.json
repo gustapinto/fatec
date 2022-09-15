@@ -1,0 +1,15 @@
+{
+    "name": "Node",
+    "dockerComposeFile": [
+        "./docker-compose.yml"
+    ],
+    "service": "node",
+    "workspaceFolder": "/dsw_projeto_api_git",
+    "runServices": [
+        "node"
+    ],
+    "extensions": [
+        "ms-vscode.vscode-typescript-next",
+        "dbaeumer.vscode-eslint"
+    ]
+}
