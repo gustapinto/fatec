@@ -1,9 +1,10 @@
-import axios from 'axios'
+import axios, { AxiosResponse } from 'axios'
 
-class GithubAPIRepositoryFetcher {
-    async getAllRepositories(): Promise<Array<any>> {
-        const endpoint = 'https://api.github.com/repositories'
-        const response = await axios.get(endpoint)
+export class GithubAPIRepositoryFetcher {
+    endpoint: str = 'https://api.github.com/repositories'
+
+    async getAllRepositories(): Promise<AxiosResponse<any, any>> {
+        const response = await axios.get(this.endpoint)
 
         return response.data
     }
