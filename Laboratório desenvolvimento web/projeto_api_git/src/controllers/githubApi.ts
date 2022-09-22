@@ -1,6 +1,6 @@
 import { Controller, Get } from "@overnightjs/core";
-import { GithubApiFetcher } from "@src/fetchers/githubApi";
 import { GithubRepository } from "@src/models/githubApi";
+import { GithubApiFetcher } from "@src/fetchers/githubApi";
 import { GithubApiParser } from "@src/parsers/githubApi";
 
 @Controller('/api/github')
@@ -15,9 +15,9 @@ export class GithubApiController {
         const parser = new GithubApiParser()
 
         const repositories: Array<any> = await fetcher.fetchTopRepositories()
-        const repositoriesList = repositories.map(async (repository: any): Promise<GithubRepository> => {
+        const repositoriesList = await Promise.all(repositories.map(async (repository: any): Promise<GithubRepository> => {
             return await parser.parseFullRepositoryInfoToOnlyGetBasicInfo(fetcher, repository)
-        })
+        }))
 
         return repositoriesList
     }
@@ -30,7 +30,7 @@ export class GithubApiController {
      * }]
     */
     @Get('repositories/heatmap')
-    async getLanguagesHeatmap(): Promise<Array<any>> {
+    async getLanguagesHeatmap(): Promise<void> {
         // TODO
     }
 }

@@ -3,7 +3,7 @@ import axios from 'axios'
 export class GithubApiFetcher {
     baseUrl = 'https://api.github.com'
 
-    async fetchTopRepositories(): Promise<Array<any>> {
+    async fetchTopRepositories(): Promise<Array<string>> {
         const endpoint = this.baseUrl + "/search/repositories?q=stars:>1&sort=stars"
         const response = await axios.get(endpoint)
 
