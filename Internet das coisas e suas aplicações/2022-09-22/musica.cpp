@@ -1,0 +1,139 @@
+#define DO_1  33
+#define DO_S1 35
+#define RE_1  37
+#define RE_S1 39
+#define MI_1  41
+#define FA_1  44
+#define FA_S1 46
+#define SOL_1  49
+#define SOL_S1 52
+#define LA_1  55
+#define LA_S1 58
+#define SI_1  62
+#define DO_2  65
+#define DO_S2 69
+#define RE_2  73
+#define RE_S2 78
+#define MI_2  82
+#define FA_2  87
+#define FA_S2 93
+#define SOL_2  98
+#define SOL_S2 104
+#define LA_2  110
+#define LA_S2 117
+#define SI_2  123
+#define DO_3  131
+#define DO_S3 139
+#define RE_3  147
+#define RE_S3 156
+#define MI_3  165
+#define FA_3  175
+#define FA_S3 185
+#define SOL_3  196
+#define SOL_S3 208
+#define LA_3  220
+#define LA_S3 233
+#define SI_3  247
+#define DO_4  262
+#define DO_S4 277
+#define RE_4  294
+#define RE_S4 311
+#define MI_4  330
+#define FA_4  349
+#define FA_S4 370
+#define SOL_4  392
+#define SOL_S4 415
+#define LA_4  440
+#define LA_S4 466
+#define SI_4  494
+#define DO_5  523
+#define DO_S5 554
+#define RE_5  587
+#define RE_S5 622
+#define MI_5  659
+#define FA_5  698
+#define FA_S5 740
+#define SOL_5  784
+#define SOL_S5 831
+#define LA_5  880
+#define LA_S5 932
+#define SI_5  988
+#define DO_6  1047
+#define DO_S6 1109
+#define RE_6  1175
+#define RE_S6 1245
+#define MI_6  1319
+#define FA_6  1397
+#define FA_S6 1480
+#define SOL_6  1568
+#define SOL_S6 1661
+#define LA_6  1760
+#define LA_S6 1865
+#define SI_6  1976
+#define DO_7  2093
+#define DO_S7 2217
+#define RE_7  2349
+#define RE_S7 2489
+#define MI_7  2637
+#define FA_7  2794
+#define FA_S7 2960
+#define SOL_7  3136
+#define SOL_S7 3322
+#define LA_7  3520
+#define LA_S7 3729
+#define SI_7  3951
+#define DO_8  4186
+#define DO_S8 4435
+#define RE_8  4699
+#define RE_S8 4978
+#define REST  0
+
+int buzzer = 9;
+
+void setup() {
+    pinMode(buzzer, OUTPUT);
+}
+
+void loop() {
+    tone(buzzer, SOL_7, 250);
+    tone(buzzer, SOL_7, 250);
+    tone(buzzer, SOL_7, 250);
+    tone(buzzer, SOL_7, 250);
+    tone(buzzer, FA_S7, 250);
+    tone(buzzer, SOL_7, 250);
+    tone(buzzer, SOL_7, 250);
+    tone(buzzer, FA_S7, 250);
+    tone(buzzer, SOL_7, 250);
+    tone(buzzer, LA_7, 250);
+    tone(buzzer, SI_7, 250);
+    tone(buzzer, LA_7, 250);
+    tone(buzzer, SOL_7, 250);
+    tone(buzzer, SOL_7, 250);
+    tone(buzzer, SOL_7, 250);
+    tone(buzzer, SOL_7, 250);
+    tone(buzzer, FA_S7, 250);
+    tone(buzzer, SOL_7, 250);
+    tone(buzzer, SOL_7, 250);
+    tone(buzzer, RE_6, 250);
+    tone(buzzer, SOL_7, 250);
+    tone(buzzer, LA_7, 250);
+    tone(buzzer, RE_6, 250);
+    tone(buzzer, RE_7, 250);
+    tone(buzzer, DO_7, 250);
+    tone(buzzer, SI_7, 250);
+    tone(buzzer, LA_7, 250);
+    tone(buzzer, SI_7, 250);
+    tone(buzzer, DO_7, 250);
+    tone(buzzer, SI_7, 250);
+    tone(buzzer, LA_7, 250);
+    tone(buzzer, SOL_7, 250);
+    tone(buzzer, FA_S7, 250);
+    tone(buzzer, SOL_7, 250);
+    tone(buzzer, FA_S7, 250);
+    tone(buzzer, FA_S7, 250);
+    tone(buzzer, SOL_7, 250);
+    tone(buzzer, LA_S7, 250);
+    tone(buzzer, SI_7, 250);
+    tone(buzzer, LA_7, 250);
+    tone(buzzer, SOL_7, 250);
+}
