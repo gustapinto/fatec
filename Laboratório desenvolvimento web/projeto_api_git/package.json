@@ -29,8 +29,9 @@
     "@test": "./dist/test"
   },
   "scripts": {
-    "start": "yarn tsc -p ./tsconfig.json && node dist/src/index.js",
-    "start:dev": "ts-node-dev ./src/index.ts",
+    "build": "yarn tsc -p ./tsconfig.json",
+    "run": "yarn build && node dist/src/index.js",
+    "run:dev": "ts-node-dev ./src/index.ts",
     "test": "jest"
   }
 }
