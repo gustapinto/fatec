@@ -1,18 +1,43 @@
-import axios from 'axios'
+import axios, { AxiosRequestConfig, AxiosResponse } from 'axios'
 
 export class GithubApiFetcher {
     baseUrl = 'https://api.github.com'
+    config: AxiosRequestConfig = {
+        headers: {
+            Authorization: 'Bearer ' + process.env.GITHUB_API_TOKEN as string
+        }
+    }
 
-    async fetchTopRepositories(): Promise<Array<string>> {
+    async fetchTopRepositories(limit: number): Promise<Array<string>> {
         const endpoint = this.baseUrl + "/search/repositories?q=stars:>1&sort=stars"
-        const response = await axios.get(endpoint)
 
-        return response.data.items
+        let response: AxiosResponse<any, any>
+
+        try {
+            console.info('Doing request to ' + endpoint + 'using headers: ' + this.config as string)
+
+            response = await axios.get(endpoint, this.config)
+        } catch (err: any) {
+            console.error(err)
+            return []
+        }
+
+        return response.data.items.slice(0, limit+1)
     }
 
     async fetchRepositoryLanguages(repositoryFullName: string): Promise<Array<string>> {
         const endpoint = this.baseUrl + "/repos/" + repositoryFullName + "/languages"
-        const response = await axios.get(endpoint)
+
+        let response: AxiosResponse<any, any>
+
+        try {
+            console.info('Doing request to ' + endpoint + 'using headers: ' + this.config as string)
+
+            response = await axios.get(endpoint, this.config)
+        } catch (err: any) {
+            console.error(err)
+            return []
+        }
 
         if (!response.data && !response.data.length) {
             return []

@@ -1,5 +1,6 @@
 import { GithubApiFetcher } from "@src/fetchers/githubApi"
 import { GithubRepository } from "@src/models/githubApi"
+import { stringify } from "querystring"
 
 export class GithubApiParser {
     async parseFullRepositoryInfoToOnlyGetBasicInfo(fetcher: GithubApiFetcher, fullRepositoryInfo: any): Promise<GithubRepository> {
@@ -13,5 +14,23 @@ export class GithubApiParser {
             languages: repositoryLanguages,
             mostUsedLanguage: mostUsedLanguage
         }
+    }
+
+    parseBasicRepositoryInfoIntoHeatMap(repositories: Array<GithubRepository>): any {
+        let languages: any = {}
+
+        repositories.forEach(repository => {
+            const repositoryLang = repository.mostUsedLanguage === null
+                ? 'nenhuma'
+                : repository.mostUsedLanguage
+
+            if (repositoryLang in languages) {
+                languages[repositoryLang] += 1
+            } else {
+                languages[repositoryLang] = 1
+            }
+        })
+
+        return languages
     }
 }

@@ -1,5 +1,6 @@
 import mockedRepositoryWithoutLanguages from '../mocks/mockedRepositoryWithoutLanguages.json'
 import mockedRepositoryWithLanguages from '../mocks/mockedRepositoryWithLanguages.json'
+import mockedRepositoryInfo from '../mocks/mockedRepositoryInfo.json'
 import { GithubApiFetcher } from '@src/fetchers/githubApi'
 import { GithubApiParser } from '@src/parsers/githubApi'
 
@@ -40,6 +41,23 @@ describe('Unit testing for the Github API Fetcher', (): void => {
                 'Less',
             ],
             mostUsedLanguage: 'TypeScript'
+        })
+    })
+
+    it('Test parseBasicRepositoryInfoIntoHeatMap must return a empty object on a empty input', (): void => {
+        const parser = new GithubApiParser()
+        const heatmap = parser.parseBasicRepositoryInfoIntoHeatMap([])
+
+        expect(heatmap).toEqual({})
+    })
+
+    it('Test parseBasicRepositoryInfoIntoHeatMap must return a non empty object with a valid input', (): void => {
+        const parser = new GithubApiParser()
+        const heatmap = parser.parseBasicRepositoryInfoIntoHeatMap(mockedRepositoryInfo)
+
+        expect(heatmap).toEqual({
+            Python: 2,
+            TypeScript: 1,
         })
     })
 })
