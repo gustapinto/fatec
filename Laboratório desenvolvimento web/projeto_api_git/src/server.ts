@@ -8,6 +8,8 @@ export class ApiServer extends Server {
         super()
 
         this.app.use(bodyParser.json())
+        this.app.use(bodyParser.urlencoded({extended: true}))
+
         this.setupControllers()
     }
 

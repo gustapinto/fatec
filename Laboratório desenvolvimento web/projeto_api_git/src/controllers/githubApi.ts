@@ -3,7 +3,7 @@ import { GithubRepository } from "@src/models/githubApi";
 import { GithubApiFetcher } from "@src/fetchers/githubApi";
 import { GithubApiParser } from "@src/parsers/githubApi";
 
-@Controller('/api/github')
+@Controller('api/github')
 export class GithubApiController {
     /**
      * Endpoint que retorna uma listagem resumida de todos os repositórios no
