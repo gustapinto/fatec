@@ -8,29 +8,12 @@ export class GithubApiParser {
         const mostUsedLanguage = repositoryLanguages.length == 0 ? null : repositoryLanguages[0]
 
         return {
+            id: fullRepositoryInfo.id,
             name: fullRepositoryInfo.name,
             fullName: fullRepositoryInfo.full_name,
-            url: fullRepositoryInfo.html_url,
+            size: fullRepositoryInfo.size,
             languages: repositoryLanguages,
-            mostUsedLanguage: mostUsedLanguage
+            languages_url: fullRepositoryInfo.languages_url
         }
-    }
-
-    parseBasicRepositoryInfoIntoHeatMap(repositories: Array<GithubRepository>): any {
-        let languages: any = {}
-
-        repositories.forEach(repository => {
-            const repositoryLang = repository.mostUsedLanguage === null
-                ? 'nenhuma'
-                : repository.mostUsedLanguage
-
-            if (repositoryLang in languages) {
-                languages[repositoryLang] += 1
-            } else {
-                languages[repositoryLang] = 1
-            }
-        })
-
-        return languages
     }
 }

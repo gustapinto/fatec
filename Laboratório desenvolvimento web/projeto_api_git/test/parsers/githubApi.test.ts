@@ -12,11 +12,12 @@ describe('Unit testing for the Github API Fetcher', (): void => {
         const info = await parser.parseFullRepositoryInfoToOnlyGetBasicInfo(fetcher, mockedRepositoryWithoutLanguages)
 
         expect(info).toEqual({
+            id: 60493101,
             name: 'coding-interview-university',
             fullName: 'jwasham/coding-interview-university',
-            url: 'https://github.com/jwasham/coding-interview-university',
+            size: 17913,
             languages: [],
-            mostUsedLanguage: null
+            languages_url: 'https://api.github.com/repos/jwasham/coding-interview-university/languages',
         })
     })
 
@@ -27,9 +28,10 @@ describe('Unit testing for the Github API Fetcher', (): void => {
         const info = await parser.parseFullRepositoryInfoToOnlyGetBasicInfo(fetcher, mockedRepositoryWithLanguages)
 
         expect(info).toEqual({
+            id: 28457823,
             name: 'freeCodeCamp',
             fullName: 'freeCodeCamp/freeCodeCamp',
-            url: 'https://github.com/freeCodeCamp/freeCodeCamp',
+            size: 344581,
             languages: [
                 'TypeScript',
                 'JavaScript',
@@ -40,24 +42,8 @@ describe('Unit testing for the Github API Fetcher', (): void => {
                 'HTML',
                 'Less',
             ],
-            mostUsedLanguage: 'TypeScript'
-        })
-    })
+            languages_url: "https://api.github.com/repos/freeCodeCamp/freeCodeCamp/languages",
 
-    it('Test parseBasicRepositoryInfoIntoHeatMap must return a empty object on a empty input', (): void => {
-        const parser = new GithubApiParser()
-        const heatmap = parser.parseBasicRepositoryInfoIntoHeatMap([])
-
-        expect(heatmap).toEqual({})
-    })
-
-    it('Test parseBasicRepositoryInfoIntoHeatMap must return a non empty object with a valid input', (): void => {
-        const parser = new GithubApiParser()
-        const heatmap = parser.parseBasicRepositoryInfoIntoHeatMap(mockedRepositoryInfo)
-
-        expect(heatmap).toEqual({
-            Python: 2,
-            TypeScript: 1,
         })
     })
 })

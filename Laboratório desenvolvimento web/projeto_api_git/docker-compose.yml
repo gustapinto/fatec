@@ -4,7 +4,6 @@ services:
   node:
     image: node:18
     tty: true
-    command: bash -c "yarn install && yarn start:dev"
     volumes:
       - ./:/dsw_projeto_api_git:Z
     ports:

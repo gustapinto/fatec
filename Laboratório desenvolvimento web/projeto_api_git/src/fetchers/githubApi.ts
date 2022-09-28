@@ -14,11 +14,8 @@ export class GithubApiFetcher {
         let response: AxiosResponse<any, any>
 
         try {
-            console.info('Doing request to ' + endpoint + 'using headers: ' + this.config as string)
-
             response = await axios.get(endpoint, this.config)
         } catch (err: any) {
-            console.error(err)
             return []
         }
 
@@ -31,11 +28,8 @@ export class GithubApiFetcher {
         let response: AxiosResponse<any, any>
 
         try {
-            console.info('Doing request to ' + endpoint + 'using headers: ' + this.config as string)
-
             response = await axios.get(endpoint, this.config)
         } catch (err: any) {
-            console.error(err)
             return []
         }
 
