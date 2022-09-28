@@ -3,7 +3,7 @@ import { GithubRepository } from "@src/models/githubApi"
 import { stringify } from "querystring"
 
 export class GithubApiParser {
-    async parseFullRepositoryInfoToOnlyGetBasicInfo(fetcher: GithubApiFetcher, fullRepositoryInfo: any): Promise<GithubRepository> {
+    async parseRepository(fetcher: GithubApiFetcher, fullRepositoryInfo: any): Promise<GithubRepository> {
         const repositoryLanguages = await fetcher.fetchRepositoryLanguages(fullRepositoryInfo.full_name)
         const mostUsedLanguage = repositoryLanguages.length == 0 ? null : repositoryLanguages[0]
 

@@ -5,11 +5,11 @@ import { GithubApiFetcher } from '@src/fetchers/githubApi'
 import { GithubApiParser } from '@src/parsers/githubApi'
 
 describe('Unit testing for the Github API Fetcher', (): void => {
-    it('Test parseFullRepositoryInfoToOnlyGetBasicInfo on a repository with empty languages', async (): Promise<void> => {
+    it('Test parseRepository on a repository with empty languages', async (): Promise<void> => {
         const parser = new GithubApiParser()
         const fetcher = new GithubApiFetcher()
 
-        const info = await parser.parseFullRepositoryInfoToOnlyGetBasicInfo(fetcher, mockedRepositoryWithoutLanguages)
+        const info = await parser.parseRepository(fetcher, mockedRepositoryWithoutLanguages)
 
         expect(info).toEqual({
             id: 60493101,
@@ -21,11 +21,11 @@ describe('Unit testing for the Github API Fetcher', (): void => {
         })
     })
 
-    it('Test parseFullRepositoryInfoToOnlyGetBasicInfo on a repository with languages', async (): Promise<void> => {
+    it('Test parseRepository on a repository with languages', async (): Promise<void> => {
         const parser = new GithubApiParser()
         const fetcher = new GithubApiFetcher()
 
-        const info = await parser.parseFullRepositoryInfoToOnlyGetBasicInfo(fetcher, mockedRepositoryWithLanguages)
+        const info = await parser.parseRepository(fetcher, mockedRepositoryWithLanguages)
 
         expect(info).toEqual({
             id: 28457823,
