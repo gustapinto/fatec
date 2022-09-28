@@ -30,8 +30,8 @@
   },
   "scripts": {
     "build": "yarn tsc -p ./tsconfig.json",
-    "run": "yarn build && node dist/src/index.js",
-    "run:dev": "ts-node-dev ./src/index.ts",
+    "start": "yarn build && node dist/src/index.js",
+    "start:dev": "ts-node-dev -r tsconfig-paths/register --no-notify ./src/index.ts",
     "test": "jest"
   }
 }
