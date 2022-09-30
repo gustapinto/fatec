@@ -3,14 +3,14 @@ import { GithubApiFetcher } from '@src/fetchers/githubApi'
 describe('Unit testing for the Github API Fetcher', (): void => {
     it('Test fetchTopRepositories must not return a null response', async (): Promise<void> => {
         const fetcher = new GithubApiFetcher()
-        const repositories = await fetcher.fetchTopRepositories()
+        const repositories = await fetcher.fetchTopRepositories(1)
 
         expect(repositories).not.toBeNull()
     })
 
     it('Test fetchTopRepositories must not return a empty Array', async (): Promise<void> => {
         const fetcher = new GithubApiFetcher()
-        const repositories = await fetcher.fetchTopRepositories()
+        const repositories = await fetcher.fetchTopRepositories(1)
 
         expect(repositories).not.toBe({})
     })

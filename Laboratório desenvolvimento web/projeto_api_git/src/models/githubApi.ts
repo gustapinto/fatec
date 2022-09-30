@@ -1,7 +1,8 @@
 export interface GithubRepository {
+    id: number,
     name: string,
     fullName: string,
-    url: string,
+    size: number,
     languages: Array<string>
-    mostUsedLanguage: string|null
+    languages_url: string
 }

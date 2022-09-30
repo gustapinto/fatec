@@ -1,0 +1,34 @@
+[
+    {
+        "name": "developer-roadmap",
+        "fullName": "kamranahmedse/developer-roadmap",
+        "url": "https://github.com/kamranahmedse/developer-roadmap",
+        "languages": [
+            "TypeScript",
+            "JavaScript",
+            "CSS",
+            "Shell"
+        ],
+        "mostUsedLanguage": "TypeScript"
+    },
+    {
+        "name": "public-apis",
+        "fullName": "public-apis/public-apis",
+        "url": "https://github.com/public-apis/public-apis",
+        "languages": [
+            "Python",
+            "Shell"
+        ],
+        "mostUsedLanguage": "Python"
+    },
+    {
+        "name": "system-design-primer",
+        "fullName": "donnemartin/system-design-primer",
+        "url": "https://github.com/donnemartin/system-design-primer",
+        "languages": [
+            "Python",
+            "Shell"
+        ],
+        "mostUsedLanguage": "Python"
+    }
+]

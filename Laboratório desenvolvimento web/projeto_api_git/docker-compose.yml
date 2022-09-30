@@ -9,3 +9,5 @@ services:
     ports:
       - 3000:3000
     working_dir: /dsw_projeto_api_git
+    env_file:
+      - .env

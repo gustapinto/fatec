@@ -68,3 +68,7 @@ typings/
 
 # typescript compiled code
 dist/
+
+# drawio
+*.bkp
+*.dtmp
