@@ -1,0 +1,50 @@
+NUM_NODE = 1
+IMAGE_BOX = "ubuntu/focal64"
+NODE_NAME = "svr"
+NODE_MEM = 4096
+NODE_CPU = 2
+
+IP_NW = "192.168.56."
+NODE_IP_START = 10
+
+# Script de provisionamento da vm
+$script = <<-SCRIPT
+  # Entra no diretório de arquivos temporários
+  cd /tmp
+
+  # Faz a instalação do docker usando o script utilitário
+  curl -fsSL https://get.docker.com -o get-docker.sh
+  sudo sh get-docker.sh
+  sudo usermod -aG docker $USER
+SCRIPT
+
+Vagrant.configure("2") do |config|
+  config.vm.box = "#{IMAGE_BOX}"
+  config.vm.box_check_update = false
+
+  # Configura uma vm para cada número
+  
+  (1..NUM_NODE).each do |i|
+    config.vm.define "#{NODE_NAME}0#{i}" do |node|
+        # Configura os detalhes da vm específicos do VirtualBox
+        node.vm.provider "virtualbox" do |vb|
+            vb.name = "#{NODE_NAME}#{i}" # O nome da vm
+            vb.memory = "#{NODE_MEM}" # A quantidade de memória da vm, em MB
+            vb.cpus = "#{NODE_CPU}" # A quantidade de núcleos de CPU da vm
+        end
+
+        # Configura o hostname da vm usando o id configurado
+        node.vm.hostname = "#{NODE_NAME}#{i}"
+
+        # Configura as interfaces de rede das máquinas virtuais
+        node.vm.network :private_network, ip: IP_NW + "#{NODE_IP_START + i}"
+        node.vm.network "public_network", bridge: "Realtek PCIe GbE Family Controller #3"
+        node.vm.network "forwarded_port", guest: 80, host: "80"
+
+        # Comando de provisionamento da máquina, sempre que ela for criada
+        # ou atualizada usando vagrant up <mv> --provision esse comando vai
+        # executar
+        # node.vm.provision "shell", inline: $script
+    end
+  end
+end
