@@ -1,12 +1,14 @@
 - hosts: all
   tasks:
     - name: Criar usuario fatec
+      become: yes
       user:
         name: fatec
         state: present
         shell: /bin/bash
-    
+
     - name: Instalar pacotes
+      become: yes
       package:
         name: cowsay
         state: present
