@@ -1,0 +1,15 @@
+- hosts: all
+  tasks:
+    - name: Criar usuario fatec
+      user:
+        name: fatec
+        state: present
+        shell: /bin/bash
+    
+    - name: Instalar pacotes
+      package:
+        name: cowsay
+        state: present
+
+    - name: Executa cowsay
+      command: cowsay Ansible!
