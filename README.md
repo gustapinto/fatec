@@ -32,3 +32,7 @@ Uma breve coleção de exercícios, exemplos, diagramas, aprendizados e gambiarr
 - [Programação para dispositivos móveis 1](https://github.com/gustapinto/fatec/tree/main/Programa%C3%A7%C3%A3o%20para%20dispositivos%20m%C3%B3veis%201)
 - [Estatística aplicada](https://github.com/gustapinto/fatec/tree/main/Estat%C3%ADstica%20aplicada)
 - [Integração e entrega contínua](https://github.com/gustapinto/fatec/tree/main/Integra%C3%A7%C3%A3o%20e%20entrega%20cont%C3%ADnua)
+
+### Quinto semestre
+- [Programação para dispositivos móveis 2]("https://github.com/gustapinto/fatec/tree/main/Programa%C3%A7%C3%A3o%20para%20dispositivos%20m%C3%B3veis%202")
+
