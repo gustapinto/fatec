@@ -1,17 +1,11 @@
-import 'dart:ui';
-
 import 'package:flutter/material.dart';
+import 'package:flutter_application_2/components/contact_item.dart';
+import 'package:flutter_application_2/components/contact_list.dart';
+import 'package:flutter_application_2/utils/scroll_behavior.dart';
+import 'components/avatar.dart';
 
 void main() {
   runApp(const MainApp());
-}
-
-class AppScrollBehavior extends MaterialScrollBehavior {
-  @override
-  Set<PointerDeviceKind> get dragDevices => {
-    PointerDeviceKind.touch,
-    PointerDeviceKind.mouse,
-  };
 }
 
 class MainApp extends StatelessWidget {
@@ -28,50 +22,26 @@ class MainApp extends StatelessWidget {
         body: Column(
           children: [
             Expanded(
-              flex: 3,
-              child: Container(
-                child: PageView(
-                  children: [
-                    Container(
-                      color: Colors.red,
-                      child: Column(
-                        children: [
-                          Container(
-                            padding: 400,
-                            child: const Align(
-                              alignment: Alignment.center,
-                              child: CircleAvatar(
-                                radius: 100,
-                                child: Text('FOO',
-                                  style: TextStyle(
-                                    fontSize: 70,
-                                    fontWeight: FontWeight.bold
-                                  ),
-                                ),
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                    Container(
-                      color: Colors.purple,
-                    ),
-                    Container(
-                      color: Colors.blue,
-                    )
-                  ],
-                )
+              child: PageView(
+                children: [
+                  const Avatar(name: 'FOO 3'),
+                  Container(
+                    color: Colors.purple,
+                  ),
+                  Container(
+                    color: Colors.blue,
+                  ),
+                ],
               ),
             ),
-            Expanded(
-              child: Column(
-                children: const [
-                  ListTile(
-                    leading: Icon(Icons.email),
-                    title: Text('Foobar'),
-                    subtitle: Text('foobar@email.com'),
-                  ),
+            const Expanded(
+              child: ContactList(
+                contacts: [
+                  ContactItem(name: 'Foo 1', email: 'foo@bar1.com'),
+                  ContactItem(name: 'Foo 2', email: 'foo@bar2.com'),
+                  ContactItem(name: 'Foo 3', email: 'foo@bar3.com'),
+                  ContactItem(name: 'Foo 4', email: 'foo@bar4.com'),
+                  ContactItem(name: 'Foo 5', email: 'foo@bar5.com'),
                 ],
               ),
             ),
