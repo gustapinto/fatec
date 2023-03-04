@@ -1,0 +1,5 @@
+Gustavo Henrique Pinto
+
+Para identificar os frutos do mar eu primeiro removi todas as colunas usando o "Select Column", em seguida usei o arquivo de teste para identificar quais atributos melhor definem uma categoria, no caso dos frutos do mar a proteína, que foi adicionada as colunas, e permitiu que a árvore já classificasse os frutos do mar.
+
+Com os frutos do mar já identificados usei uma técnica parecida para identificar as frutas e verduras, identificando e adicionando as colunas que melhor definiam o que é uma fruta e o que é uma verdura, que no caso acabram sendo "Vitamina C" para as frutas e "Sódio" para os vegetais, conseguindo a partir disso chegar a uma classificação clara entre todas as três categorias.
