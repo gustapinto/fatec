@@ -1,10 +1,16 @@
 import 'package:flutter/material.dart';
 
 class ContactItem extends StatelessWidget {
-  const ContactItem({required this.name, required this.email, super.key});
+  const ContactItem({
+    required this.name,
+    required this.email,
+    this.icon = Icons.email,
+    super.key,
+  });
 
   final String name;
   final String email;
+  final IconData icon;
 
   @override
   Widget build(BuildContext context) {
@@ -13,7 +19,7 @@ class ContactItem extends StatelessWidget {
       child: FractionallySizedBox(
         widthFactor: 0.5,
         child: ListTile(
-          leading: const Icon(Icons.email),
+          leading: Icon(icon),
           title: Text(name),
           subtitle: Text(email),
         ),

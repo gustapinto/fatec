@@ -47,6 +47,8 @@
   - É usado como base para a criação do "Product Backlog"
 - Análise
   - É a etapa em que as perguntas norteadores e as atividades e recursos são analisados e tranformados em uma solução
+  - Objetiva que todos os membros do projeto estejam em sintonia sobre as informações levantadas durante a realização da investigação
+  - Identifica os possível concorrentes do projeto
 
 ### Ação
 
