@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_2/components/contact_item.dart';
+import 'package:flutter_application_2/components/contact/contact_item.dart';
 
 class ContactList extends StatelessWidget {
   const ContactList({required this.contacts, super.key});

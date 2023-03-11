@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_2/components/contact_item.dart';
-import 'package:flutter_application_2/components/contact_list.dart';
+import 'package:flutter_application_2/components/contact/contact_item.dart';
+import 'package:flutter_application_2/components/contact/contact_list.dart';
 import 'package:flutter_application_2/utils/scroll_behavior.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'components/avatar.dart';
+import 'package:flutter_application_2/components/avatar/avatar.dart';
 
 void main() {
   runApp(const MainApp());
@@ -45,9 +45,10 @@ class MainApp extends StatelessWidget {
               child: ContactList(
                 contacts: [
                   ContactItem(
-                      name: 'Foo 1',
-                      email: 'foo@bar1.com',
-                      icon: FontAwesomeIcons.instagram),
+                    name: 'Foo 1',
+                    email: 'foo@bar1.com',
+                    icon: FontAwesomeIcons.instagram,
+                  ),
                   ContactItem(name: 'Foo 2', email: 'foo@bar2.com'),
                   ContactItem(name: 'Foo 3', email: 'foo@bar3.com'),
                   ContactItem(name: 'Foo 4', email: 'foo@bar4.com'),
