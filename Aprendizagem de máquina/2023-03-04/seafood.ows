@@ -109,12 +109,12 @@ dGV4dJSTlCmBlH2UKIwGdmFsdWVzlH2UKIwSdGFyZ2V0X2NsYXNzX2luZGV4lEsAaAlLAXWMB2Ns
 YXNzZXOUjAZGcnVpdHOUjAdTZWFmb29klIwKVmVnZXRhYmxlc5SHlHViaA4pgZR9lChoEX2UKGgT
 SwBoCUsBdWgUTnViZXUu
 </properties>
-		<properties node_id="4" format="pickle">gASVLQEAAAAAAAB9lCiMEmNvbnRyb2xBcmVhVmlzaWJsZZSIjBNzYXZlZFdpZGdldEdlb21ldHJ5
+		<properties node_id="4" format="pickle">gASVJgEAAAAAAAB9lCiMEmNvbnRyb2xBcmVhVmlzaWJsZZSIjBNzYXZlZFdpZGdldEdlb21ldHJ5
 lENCAdnQywADAAAAAAAmAAAAGwAAB38AAAQ3AAAAJgAAAEAAAAd/AAAENwAAAAACAAAAB4AAAAAm
-AAAAQAAAB38AAAQ3lIwJc2VsZWN0aW9ulF2UKEsASwFLAksDZYwLc2hvd19zY29yZXOUiIwLc2Nv
-cmVfdGFibGWUfZSMDHNob3duX3Njb3Jlc5SPlCiMA01BRZSMB0MtSW5kZXiUjAZSZWNhbGyUjANN
-U0WUjANBVUOUjAJSMpSMAkNBlIwCRjGUjARSTVNFlIwJUHJlY2lzaW9ulJBzjAtfX3ZlcnNpb25f
-X5RLAYwQY29udGV4dF9zZXR0aW5nc5RdlHUu
+AAAAQAAAB38AAAQ3lIwJc2VsZWN0aW9ulF2USwBhjAtzaG93X3Njb3Jlc5SIjAtzY29yZV90YWJs
+ZZR9lIwMc2hvd25fc2NvcmVzlI+UKIwDTVNFlIwEUk1TRZSMBlJlY2FsbJSMAlIylIwCRjGUjAdD
+LUluZGV4lIwDQVVDlIwJUHJlY2lzaW9ulIwCQ0GUjANNQUWUkHOMC19fdmVyc2lvbl9flEsBjBBj
+b250ZXh0X3NldHRpbmdzlF2UdS4=
 </properties>
 		<properties node_id="5" format="pickle">gASVwgoAAAAAAAB9lCiMEmNvbnRyb2xBcmVhVmlzaWJsZZSIjAxyZWNlbnRfcGF0aHOUXZQojB5v
 cmFuZ2V3aWRnZXQudXRpbHMuZmlsZWRpYWxvZ3OUjApSZWNlbnRQYXRolJOUKYGUfZQojAdhYnNw
@@ -166,7 +166,7 @@ Z3RolEsChpSMC3NlcGFsIHdpZHRolEsChpSMDHBldGFsIGxlbmd0aJRLAoaUjAtwZXRhbCB3aWR0
 aJRLAoaUdJRolilomYwEaXJpc5RdlCiMC0lyaXMtc2V0b3NhlIwPSXJpcy12ZXJzaWNvbG9ylIwO
 SXJpcy12aXJnaW5pY2GUZYaUhZRoml2UdWJldS4=
 </properties>
-		<properties node_id="6" format="literal">{'auto_commit': True, 'color_by_class': True, 'controlAreaVisible': True, 'dist_color_RGB': (220, 220, 220, 255), 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x03\x00\x00\x00\x00\x00&amp;\x00\x00\x00\x1b\x00\x00\x07\x7f\x00\x00\x047\x00\x00\x00&amp;\x00\x00\x00@\x00\x00\x07\x7f\x00\x00\x047\x00\x00\x00\x00\x02\x00\x00\x00\x07\x80\x00\x00\x00&amp;\x00\x00\x00@\x00\x00\x07\x7f\x00\x00\x047', 'select_rows': False, 'selected_cols': [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23], 'selected_rows': [9, 10], 'show_attribute_labels': True, 'show_distributions': False, '__version__': 2}</properties>
+		<properties node_id="6" format="literal">{'auto_commit': True, 'color_by_class': True, 'controlAreaVisible': True, 'dist_color_RGB': (220, 220, 220, 255), 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x03\x00\x00\x00\x00\x00&amp;\x00\x00\x00\x1b\x00\x00\x07\x7f\x00\x00\x047\x00\x00\x00&amp;\x00\x00\x00@\x00\x00\x07\x7f\x00\x00\x047\x00\x00\x00\x00\x02\x00\x00\x00\x07\x80\x00\x00\x00&amp;\x00\x00\x00@\x00\x00\x07\x7f\x00\x00\x047', 'select_rows': False, 'selected_cols': [1], 'selected_rows': [2], 'show_attribute_labels': True, 'show_distributions': False, '__version__': 2}</properties>
 	</node_properties>
 	<session_state>
 		<window_groups />

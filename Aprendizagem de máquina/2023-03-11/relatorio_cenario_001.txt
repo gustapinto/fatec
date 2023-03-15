@@ -1,0 +1,1 @@
+Para realizar a classificação das colunas "Class" e "Class_ori" realizei a importação dos dados e os visualizei utilizando uma Data Table, e em seguida removi a maioria das colunas, mantendo apenas aquelas que eu considerei que classificavam melhor a diferença entre um vinho e um vinagre, chegando assim a classificação correta
