@@ -1,7 +1,5 @@
+import 'package:f290_pdm2_person_profile/neo_profile_page.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_application_2/pages/new_profile.dart';
-import 'package:flutter_application_2/pages/profile.dart';
-import 'package:flutter_application_2/utils/scroll_behavior.dart';
 
 void main() {
   runApp(const MainApp());
@@ -14,13 +12,13 @@ class MainApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData(
-        useMaterial3: true,
         brightness: Brightness.dark,
-        colorSchemeSeed: Colors.red,
+        useMaterial3: true,
+        colorSchemeSeed: Colors.blue,
       ),
       debugShowCheckedModeBanner: false,
-      scrollBehavior: AppScrollBehavior(),
-      home: const ProfilePage()
+      title: 'Ricieri Profile',
+      home: const NeoProfilePage(),
     );
   }
 }

@@ -7,15 +7,13 @@
 		<node id="3" name="Tree Viewer" qualified_name="Orange.widgets.visualize.owtreeviewer.OWTreeGraph" project_name="Orange3" version="" title="Tree Viewer" position="(-23.00000000000003, -65.99999999999997)" />
 		<node id="4" name="Predictions" qualified_name="Orange.widgets.evaluate.owpredictions.OWPredictions" project_name="Orange3" version="" title="Predictions" position="(-21.45454545454551, 41.909090909090914)" />
 		<node id="5" name="File" qualified_name="Orange.widgets.data.owfile.OWFile" project_name="Orange3" version="" title="Test" position="(-473.1818181818181, 50.909090909090935)" />
-		<node id="6" name="Data Table" qualified_name="Orange.widgets.data.owtable.OWDataTable" project_name="Orange3" version="" title="Data Table (1)" position="(-325.45454545454544, 100.90909090909088)" />
 	</nodes>
 	<links>
 		<link id="0" source_node_id="0" sink_node_id="1" source_channel="Data" sink_channel="Data" enabled="true" />
 		<link id="1" source_node_id="2" sink_node_id="3" source_channel="Model" sink_channel="Tree" enabled="true" />
 		<link id="2" source_node_id="2" sink_node_id="4" source_channel="Model" sink_channel="Predictors" enabled="true" />
 		<link id="3" source_node_id="5" sink_node_id="4" source_channel="Data" sink_channel="Data" enabled="true" />
-		<link id="4" source_node_id="5" sink_node_id="6" source_channel="Data" sink_channel="Data" enabled="true" />
-		<link id="5" source_node_id="1" sink_node_id="2" source_channel="Data" sink_channel="Data" enabled="true" />
+		<link id="4" source_node_id="1" sink_node_id="2" source_channel="Data" sink_channel="Data" enabled="true" />
 	</links>
 	<annotations />
 	<thumbnail />
@@ -112,8 +110,8 @@ SwBoCUsBdWgUTnViZXUu
 		<properties node_id="4" format="pickle">gASVJgEAAAAAAAB9lCiMEmNvbnRyb2xBcmVhVmlzaWJsZZSIjBNzYXZlZFdpZGdldEdlb21ldHJ5
 lENCAdnQywADAAAAAAAmAAAAGwAAB38AAAQ3AAAAJgAAAEAAAAd/AAAENwAAAAACAAAAB4AAAAAm
 AAAAQAAAB38AAAQ3lIwJc2VsZWN0aW9ulF2USwBhjAtzaG93X3Njb3Jlc5SIjAtzY29yZV90YWJs
-ZZR9lIwMc2hvd25fc2NvcmVzlI+UKIwDTVNFlIwEUk1TRZSMBlJlY2FsbJSMAlIylIwCRjGUjAdD
-LUluZGV4lIwDQVVDlIwJUHJlY2lzaW9ulIwCQ0GUjANNQUWUkHOMC19fdmVyc2lvbl9flEsBjBBj
+ZZR9lIwMc2hvd25fc2NvcmVzlI+UKIwEUk1TRZSMAkYxlIwCQ0GUjAJSMpSMB0MtSW5kZXiUjANN
+U0WUjAlQcmVjaXNpb26UjANNQUWUjANBVUOUjAZSZWNhbGyUkHOMC19fdmVyc2lvbl9flEsBjBBj
 b250ZXh0X3NldHRpbmdzlF2UdS4=
 </properties>
 		<properties node_id="5" format="pickle">gASVwgoAAAAAAAB9lCiMEmNvbnRyb2xBcmVhVmlzaWJsZZSIjAxyZWNlbnRfcGF0aHOUXZQojB5v
@@ -166,7 +164,6 @@ Z3RolEsChpSMC3NlcGFsIHdpZHRolEsChpSMDHBldGFsIGxlbmd0aJRLAoaUjAtwZXRhbCB3aWR0
 aJRLAoaUdJRolilomYwEaXJpc5RdlCiMC0lyaXMtc2V0b3NhlIwPSXJpcy12ZXJzaWNvbG9ylIwO
 SXJpcy12aXJnaW5pY2GUZYaUhZRoml2UdWJldS4=
 </properties>
-		<properties node_id="6" format="literal">{'auto_commit': True, 'color_by_class': True, 'controlAreaVisible': True, 'dist_color_RGB': (220, 220, 220, 255), 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x03\x00\x00\x00\x00\x00&amp;\x00\x00\x00\x1b\x00\x00\x07\x7f\x00\x00\x047\x00\x00\x00&amp;\x00\x00\x00@\x00\x00\x07\x7f\x00\x00\x047\x00\x00\x00\x00\x02\x00\x00\x00\x07\x80\x00\x00\x00&amp;\x00\x00\x00@\x00\x00\x07\x7f\x00\x00\x047', 'select_rows': False, 'selected_cols': [1], 'selected_rows': [2], 'show_attribute_labels': True, 'show_distributions': False, '__version__': 2}</properties>
 	</node_properties>
 	<session_state>
 		<window_groups />
