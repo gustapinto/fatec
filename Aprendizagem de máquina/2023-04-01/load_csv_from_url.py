@@ -1,4 +1,6 @@
-from sklearn.datasets import load_iris
+import csv
+from urllib import request
+
 from sklearn.model_selection import train_test_split
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.metrics import (
@@ -10,30 +12,39 @@ from sklearn.metrics import (
 )
 
 
+CSV_URL = 'https://raw.githubusercontent.com/autonomio/datasets/master/autonomio-datasets/iris.csv'
 RANDOM_STATE = 42
 PREDICTION_AVERAGE = 'weighted'
 
-# Carrega o dataset
-iris = load_iris()
-data = iris.data  # Os dados do conjunt Iris
-target = iris.target  # O "Target" do conjunto Iris
+iris_rows = []
 
-# Divide o conjunto de dados em treinamento (70%) e teste (30%)
-data_train, data_test, target_train, target_test = train_test_split(data,
-                                                                    target,
-                                                                    test_size=0.3,
+with request.urlopen(CSV_URL) as response:
+    iris_data = [r.decode('utf-8') for r in response.readlines()]
+    iris_csv_reader = csv.reader(iris_data)
+    iris_rows = list(iris_csv_reader)
+
+iris_features = []
+iris_labels = []
+
+# Itera sobre as linhas menosprezando a linha de cabeçalho
+for row in iris_rows[1:]:
+    features = [float(value) for value in row[:-1]]
+    label = row[-1]
+
+    iris_features.append(features)
+    iris_labels.append(label)
+
+data_train, data_test, target_train, target_test = train_test_split(iris_features,
+                                                                    iris_labels,
+                                                                    test_size=0.7,
                                                                     random_state=RANDOM_STATE)
 
-# Cria um classificador de árvore de decisão
 classifier = DecisionTreeClassifier(random_state=RANDOM_STATE)
 
-# Treinando o classificador com base nos dados de treinamento
 classifier.fit(data_train, target_train)
 
-# Preditanto as amostras de teste
 target_prediction = classifier.predict(data_test)
 
-# Calculando as métricas de avaliação
 accuracy = accuracy_score(target_test, target_prediction)
 precision = precision_score(target_test, target_prediction, average=PREDICTION_AVERAGE)
 recall = recall_score(target_test, target_prediction, average=PREDICTION_AVERAGE)
