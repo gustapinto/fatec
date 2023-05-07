@@ -2,7 +2,9 @@ import 'package:faker/faker.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_sqlite/models/db/objectbox_database.dart';
 import 'package:flutter_sqlite/models/entities/nota_entity.dart';
+import 'package:flutter_sqlite/models/repositories/nota_repository.dart';
 import 'package:flutter_sqlite/objectbox.g.dart';
+import 'package:provider/provider.dart';
 
 late final Store store;
 
@@ -21,62 +23,74 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        brightness: Brightness.dark,
-        useMaterial3: true,
-        colorSchemeSeed: Colors.orange,
+    return MultiProvider(
+      providers: [
+        Provider<ObjectBoxDatabase>(
+          create: (BuildContext context) {
+            return ObjectBoxDatabase();
+          },
+        ),
+        ChangeNotifierProvider<NotaRepository>(
+          create: (BuildContext context) {
+            return NotaRepository(context.read());
+          },
+        ),
+      ],
+      child: MaterialApp(
+        title: 'Flutter Demo',
+        theme: ThemeData(
+          brightness: Brightness.dark,
+          useMaterial3: true,
+          colorSchemeSeed: Colors.orange,
+        ),
+        home: const MyHomePage(title: 'Flutter Demo Home Page'),
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
     );
   }
 }
-
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key, required this.title});
-
-  final String title;
-
-  @override
-  State<MyHomePage> createState() => _MyHomePageState();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
+class MyHomePage extends StatelessWidget {
+  const MyHomePage({super.key, required this.title});
+
   final faker = Faker();
+  final String title;
   List<Nota> notas = [];
 
-  @override
-  void initState() {
-    super.initState();
+  // @override
+  // void initState() {
+  //   super.initState();
 
-    notas = store.box<Nota>().getAll();
-
-    print(notas);
-  }
+  //   context.read<NotaRepository>().obterNotas();
+  // }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(widget.title),
+        title: const Text('Notas'),
       ),
-      body: Center(
-          child: ListView.separated(
-        itemBuilder: (context, index) {
-          return ListTile(
-            leading: CircleAvatar(
-              child: Text('${notas[index].id}'),
-            ),
-            title: Text(notas[index].titulo),
-            subtitle: Text(notas[index].descricao),
+      body: Consumer<NotaRepository>(
+        builder: (BuildContext context, NotaRepository value, child) {
+          notas = value.notas;
+
+          return ListView.separated(
+            itemBuilder: (context, index) {
+              return ListTile(
+                leading: CircleAvatar(
+                  child: Text('${notas[index].id}'),
+                ),
+                title: Text(notas[index].titulo),
+                subtitle: Text(notas[index].descricao),
+              );
+            },
+            separatorBuilder: (context, index) {
+              return const Divider(indent: 2);
+            },
+            itemCount: notas.length,
           );
         },
-        separatorBuilder: (context, index) {
-          return const Divider(indent: 2);
-        },
-        itemCount: notas.length,
-      )),
+      ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           final nota = Nota(
@@ -84,11 +98,7 @@ class _MyHomePageState extends State<MyHomePage> {
             descricao: faker.lorem.sentence(),
           );
 
-          store.box<Nota>().put(nota);
-
-          notas = store.box<Nota>().getAll();
-
-          print(notas);
+          Provider.of<NotaRepository>(context, listen: false).salvar(nota);
         },
         tooltip: 'Increment',
         child: const Icon(Icons.add),
