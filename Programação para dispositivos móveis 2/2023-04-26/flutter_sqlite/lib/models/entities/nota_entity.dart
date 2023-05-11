@@ -1,3 +1,4 @@
+import 'package:flutter_sqlite/models/entities/categoria_entity.dart';
 import 'package:objectbox/objectbox.dart';
 
 @Entity()
@@ -6,6 +7,9 @@ class Nota {
   int id = 0;
   String titulo;
   String descricao;
+
+  @Backlink()
+  final ToMany<Categoria> categorias = ToMany<Categoria>();
 
   Nota({
     required this.titulo,

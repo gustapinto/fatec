@@ -26,10 +26,37 @@
         }
       ],
       "relations": []
+    },
+    {
+      "id": "2:8020878361179897468",
+      "lastPropertyId": "3:914207135106969750",
+      "name": "Categoria",
+      "properties": [
+        {
+          "id": "1:4774816842267301198",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:1753034434839088620",
+          "name": "descricao",
+          "type": 9
+        },
+        {
+          "id": "3:914207135106969750",
+          "name": "notaId",
+          "type": 11,
+          "flags": 520,
+          "indexId": "1:7039801969797262988",
+          "relationTarget": "Nota"
+        }
+      ],
+      "relations": []
     }
   ],
-  "lastEntityId": "1:3982092124730203591",
-  "lastIndexId": "0:0",
+  "lastEntityId": "2:8020878361179897468",
+  "lastIndexId": "1:7039801969797262988",
   "lastRelationId": "0:0",
   "lastSequenceId": "0:0",
   "modelVersion": 5,
