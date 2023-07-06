@@ -1,8 +1,8 @@
-package jokenpo_poo.factories;
+package jokenpo_poo.strategy;
 
 import jokenpo_poo.enums.TipoJogadaEnum;
 
-public class TipoJogadaEnumFactory {
+public class TipoJogadaEnumStrategy {
     public static TipoJogadaEnum obtem(int jogadaId) {
         return switch (jogadaId) {
             case 1 -> TipoJogadaEnum.PEDRA;

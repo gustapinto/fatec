@@ -1,0 +1,16 @@
+br/com/fatecararas/domain/algoritimos/Papel.class
+br/com/fatecararas/domain/Jokenpo.class
+br/com/fatecararas/domain/algoritimos/Pedra.class
+br/com/fatecararas/domain/algoritimos/Spock.class
+br/com/fatecararas/Main.class
+br/com/fatecararas/domain/TipoAlgoritmo.class
+br/com/fatecararas/domain/Algoritmo.class
+br/com/fatecararas/domain/algoritimos/Tesoura.class
+br/com/fatecararas/domain/algoritimos/Papel$1.class
+br/com/fatecararas/domain/algoritimos/Pedra$1.class
+br/com/fatecararas/domain/algoritimos/Tesoura$1.class
+br/com/fatecararas/strategies/AlgoritimoStrategy$1.class
+br/com/fatecararas/domain/algoritimos/Lagarto$1.class
+br/com/fatecararas/domain/algoritimos/Lagarto.class
+br/com/fatecararas/strategies/AlgoritimoStrategy.class
+br/com/fatecararas/domain/algoritimos/Spock$1.class
