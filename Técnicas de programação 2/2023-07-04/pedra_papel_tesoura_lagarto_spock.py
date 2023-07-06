@@ -15,7 +15,9 @@ def fazer_jogada():
         print(str(i) + ' - ' + jogada)
 
     try:
-        return jogadas[int(input('Faça sua jogada: '))]
+        jogada_usuario = int(input('Faça sua jogada: '))
+
+        return jogadas[jogada_usuario]
     except IndexError:  # Tratando entrada inválida
         print('\nTente novamente com uma jogada válida entre 0 e 4!')
 
