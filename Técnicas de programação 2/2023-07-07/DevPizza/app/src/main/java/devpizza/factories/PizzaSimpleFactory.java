@@ -11,7 +11,13 @@ import devpizza.records.pizzas.PizzaQuatroQueijos;
 public class PizzaSimpleFactory {
     public static Pizza montaPizza(TipoPizzaEnum tipoPizza) {
         return switch (tipoPizza) {
-            case CALABRESA -> new PizzaCalabresa();
+            case CALABRESA -> new PizzaCalabresa("Pizza Calabresa", 35f, new String[] {
+                "Molho do chef",
+                "Mussarela",
+                "Azeitona",
+                "Calabresa",
+                "Orégano,"
+            });
             case CANGACEIRA -> new PizzaCangaceira("Pizza Cangaceira", 42.9f, new String[] {
                     "Molho caseiro",
                     "Mussarela",
