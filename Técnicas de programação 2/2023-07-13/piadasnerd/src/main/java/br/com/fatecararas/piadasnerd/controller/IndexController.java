@@ -1,7 +1,9 @@
 package br.com.fatecararas.piadasnerd.controller;
 
 import java.util.Arrays;
+import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -11,9 +13,14 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import br.com.fatecararas.piadasnerd.models.Piada;
+import br.com.fatecararas.piadasnerd.services.PiadaService;
+
 @Controller
 @RequestMapping("/")
 public class IndexController {
+    @Autowired
+    private PiadaService piadaService;
 
     @GetMapping
     public String index(Model model) {
@@ -22,6 +29,10 @@ public class IndexController {
                 "Thiago Ventura",
                 "Afonso Padilha",
                 "Bruna Louise"));
+
+        List<Piada> piadas = this.piadaService.buscarTodas();
+
+        model.addAttribute("piadas", piadas);
 
         return "index";
     }

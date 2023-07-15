@@ -15,6 +15,19 @@ public class Piada {
     private String resposta;
     private boolean possuiResposta;
 
+    public Piada() {
+    }
+
+    public Piada(String descricao, String resposta, boolean possuiResposta) {
+        this.descricao = descricao;
+        this.resposta = resposta;
+        this.possuiResposta = possuiResposta;
+    }
+
+    public Piada(String descricao, String resposta) {
+        this(descricao, resposta, (resposta != null && !resposta.isBlank()));
+    }
+
     public Integer getId() {
         return id;
     }

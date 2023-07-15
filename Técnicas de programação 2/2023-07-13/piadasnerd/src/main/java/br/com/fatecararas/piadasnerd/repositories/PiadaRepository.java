@@ -1,5 +1,10 @@
 package br.com.fatecararas.piadasnerd.repositories;
 
-public class PiadaRepository {
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
+import br.com.fatecararas.piadasnerd.models.Piada;
+
+@Repository
+public interface PiadaRepository extends JpaRepository<Piada, Integer> {
 }
