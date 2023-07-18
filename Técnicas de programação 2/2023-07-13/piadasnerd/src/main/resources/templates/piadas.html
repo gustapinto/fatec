@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello Sprig Boot</title>
+    <!--BootStrap via WebJars-->
+    <link rel="stylesheet" th:href="@{/webjars/bootstrap/5.2.3/css/bootstrap.min.css}">
+</head>
+
+<body>
+    <h1>Piadas Nerd: TP-II</h1>
+    <div th:each="piada : ${piadas}">
+        <details>
+            <summary th:text="${piada.descricao}"></summary>
+            <p th:text="${piada.resposta}"></p>
+        </details>
+    </div>
+    <!--JS-BootStrap via WebJars-->
+    <script th:src="@{/webjars/jquery/3.6.4/jquery.js}"></script>
+    <script th:src="@{/webjars/popper.js/umd/popper.js}"></script>
+    <script th:src="@{/webjars/bootstrap/5.2.3/js/bootstrap.bundle.js}"></script>
+</body>
+
+</html>
