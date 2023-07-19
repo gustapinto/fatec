@@ -1,4 +1,4 @@
-package br.com.fatecararas.piadasnerd.controller;
+package br.com.fatecararas.piadasnerd.controllers;
 
 import java.util.List;
 
@@ -17,7 +17,6 @@ import br.com.fatecararas.piadasnerd.services.PiadaService;
 @Controller
 @RequestMapping("/piadas")
 public class PiadaController {
-
     @Autowired
     private PiadaService service;
 
@@ -34,26 +33,40 @@ public class PiadaController {
     @PostMapping("/salvar")
     public String salvar(Piada piada) throws Exception {
         service.criar(piada);
+
         return "redirect:/piadas";
     }
 
     @PostMapping("/atualizar")
     public String atualizar(Piada piada) throws Exception {
         service.atualizar(piada);
+
         return "redirect:/piadas";
     }
 
     @GetMapping("/editar/{id}")
     public String preEdicao(@PathVariable("id") Integer id, Model model) {
         Piada piada = service.buscarPorId(id);
+
         model.addAttribute("piada", piada);
+
         return "cadastro";
     }
 
     @GetMapping("/excluir/{id}")
     public String excluir(@PathVariable("id") Integer id) {
         service.excluir(id);
-        return "/piadas/criar";
+
+        return "redirect:/piadas";
+    }
+
+    @PostMapping("/buscar")
+    public String busca(@ModelAttribute Piada piada, Model model) {
+        List<Piada> piadas = this.service.buscar(piada.getDescricao());
+
+        model.addAttribute("piadas", piadas);
+
+        return "piadas";
     }
 
     @ModelAttribute(name = "piadas")
@@ -61,4 +74,8 @@ public class PiadaController {
         return service.buscarTodas();
     }
 
+    @ModelAttribute(name = "piada")
+    public Piada getPiada() {
+        return new Piada();
+    }
 }

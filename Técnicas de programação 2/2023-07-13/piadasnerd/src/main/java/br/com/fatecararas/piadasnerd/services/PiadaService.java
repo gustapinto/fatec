@@ -54,4 +54,14 @@ public class PiadaService {
 
         this.repository.save(novaPiada);
     }
+
+    public List<Piada> buscar(String descricao) throws RuntimeException {
+        List<Piada> piadas = this.repository.buscaPorDescricao(descricao);
+
+        if (piadas == null || piadas.isEmpty()) {
+            throw new RuntimeException(String.format("Descrição não localizada: %s" ,descricao));
+        }
+
+        return piadas;
+    }
 }

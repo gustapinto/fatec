@@ -1,17 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" layout:decorate="~{layout}">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro Piadas</title>
+  <title>Cadastro Piadas</title>
 </head>
+
 <body>
-    <form th:action="${piada.id == null} ? @{/piadas/salvar} : @{/piadas/atualizar}" method="post" th:object="${piada}">
-        <input type="text" th:field="*{descricao}" id="descricao" required>
-        <input type="text" th:field="*{resposta}" id="resposta">
-        <input type="checkbox" th:field="*{possuiResposta}" id="possuiresposta">
+  <section class="container" layout:fragment="corpo">
+    <div>
+      <form th:action="${piada.id == null} ? @{/piadas/salvar} : @{/piadas/atualizar}" method="post"
+        th:object="${piada}">
         <input type="hidden" th:field="*{id}" id="id">
-        <button type="submit">Salvar</button>
-    </form>
+
+        <div class="mb-3">
+          <label for="descricao" class="form-label">Descrição</label>
+          <input type="text" th:field="*{descricao}" id="descricao" class="form-control" required>
+        </div>
+
+        <div class="mb-3">
+          <label for="resposta" class="form-label">Resposta</label>
+          <input type="text" th:field="*{resposta}" id="resposta" class="form-control">
+        </div>
+
+        <div class="mb-3">
+          <input type="checkbox" th:field="*{possuiResposta}" id="possuiresposta" class="form-check-input">
+          <label for="possuiResposta" class="form-check-label">Possui resposta</label>
+        </div>
+
+        <div>
+          <button type="submit" class="btn btn-primary">
+            Salvar
+          </button>
+        </div>
+      </form>
+    </div>
+  </section>
 </body>
+
 </html>

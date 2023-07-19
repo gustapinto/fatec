@@ -1,0 +1,102 @@
+details {
+    border-radius: 0.5rem;
+    margin: 1rem;
+    transition: 50ms;
+    background-color: white;
+
+}
+
+details[open] {
+    padding-bottom: 1em;
+}
+
+summary::before,
+summary::after {
+    transition: 200ms;
+}
+
+
+
+@layer markers {
+    summary {
+        position: relative;
+    }
+
+    summary::marker {
+        content: none;
+    }
+
+    summary::before,
+    summary::after {
+        content: '';
+    }
+
+    summary::before,
+    summary::after {
+        width: .75em;
+        height: 0;
+        border-bottom: 2px solid;
+        position: absolute;
+        top: calc(50% - 1px);
+        right: 0;
+        transform: translateY(-50%);
+    }
+
+    summary::after {
+        transform: rotate(90deg);
+        transform-origin: 50% 50%;
+    }
+
+    [open] summary::after {
+        transform: rotate(0deg);
+    }
+}
+
+/* styles ported over from the second example */
+@layer step2styles {
+    details {
+        border: 1px solid;
+        padding: 0 1rem;
+        background: white;
+    }
+
+    details+details {
+        border-top: none;
+    }
+
+    details[open] {
+        padding-bottom: 1em;
+    }
+
+    summary {
+        padding: 1rem 2em 1rem 0;
+        font-size: 1.25rem;
+        font-weight: bold;
+        cursor: pointer;
+    }
+}
+
+/* cascade layer: page setup. Doesn't impact the accordion */
+/* @layer setupPage {
+
+    :root {
+        font-size: 112.5%;
+        line-height: 1.5;
+    }
+
+    body {
+        background: #a4bacc99;
+        color: #226daa;
+        font-family: Raleway, sans-serif;
+        margin: 1rem;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    aside {
+        width: 38em;
+        max-width: 98vw;
+    }
+} */

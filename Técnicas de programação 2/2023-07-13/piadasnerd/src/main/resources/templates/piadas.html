@@ -1,26 +1,37 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<html lang="en" layout:decorate="~{layout}">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hello Sprig Boot</title>
-    <!--BootStrap via WebJars-->
-    <link rel="stylesheet" th:href="@{/webjars/bootstrap/5.2.3/css/bootstrap.min.css}">
+  <title>Piadas Nerds</title>
 </head>
 
 <body>
+  <section class="container" layout:fragment="corpo">
     <h1>Piadas Nerd: TP-II</h1>
+
     <div th:each="piada : ${piadas}">
-        <details>
-            <summary th:text="${piada.descricao}"></summary>
-            <p th:text="${piada.resposta}"></p>
-        </details>
+      <details>
+        <summary th:text="${piada.descricao}"></summary>
+        <tabel>
+          <tr>
+            <td>
+              <span th:text="${piada.resposta}"></span>
+            </td>
+            <td>
+              <a th:href="@{|/piadas/editar/${piada.id}|}" class="btn btn-warning btn-sm mx-3">
+                <i class="fa-solid fa-pen-to-square"></i>
+              </a>
+            </td>
+            <td>
+              <a th:href="@{|/piadas/excluir/${piada.id}|}" class="btn btn-danger btn-sm">
+                <i class="fa-solid fa-trash"></i>
+              </a>
+            </td>
+          </tr>
+        </tabel>
+      </details>
     </div>
-    <!--JS-BootStrap via WebJars-->
-    <script th:src="@{/webjars/jquery/3.6.4/jquery.js}"></script>
-    <script th:src="@{/webjars/popper.js/umd/popper.js}"></script>
-    <script th:src="@{/webjars/bootstrap/5.2.3/js/bootstrap.bundle.js}"></script>
+  </section>
 </body>
 
 </html>

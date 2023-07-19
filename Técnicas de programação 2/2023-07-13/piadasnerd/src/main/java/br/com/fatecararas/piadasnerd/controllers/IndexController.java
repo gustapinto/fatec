@@ -1,4 +1,4 @@
-package br.com.fatecararas.piadasnerd.controller;
+package br.com.fatecararas.piadasnerd.controllers;
 
 import java.util.Arrays;
 import java.util.List;

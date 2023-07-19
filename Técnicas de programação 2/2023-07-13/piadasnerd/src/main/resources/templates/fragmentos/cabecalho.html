@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+</head>
+
+<body>
+  <header th:fragment="cabecalho">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sahdow-sm">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/piadas">Piadas Nerd</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02"
+          aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" th:href="@{/piadas}">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Categorias</a>
+            </li>
+            <li>
+              <a th:href="@{/piadas/criar}" class="btn btn-outline-warning rounded-pill ms-3">Nova Piada</a>
+            </li>
+          </ul>
+          <form class="d-flex" method="post" th:action="@{/piadas/buscar}" th:object="${piada}">
+            <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Buscar" id="descricao"
+              th:field="*{descricao}">
+            <button class="btn btn-outline-success" type="submit">Buscar</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+  </header>
+</body>
+
+</html>
