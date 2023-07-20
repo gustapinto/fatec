@@ -1,6 +1,6 @@
 package bridge.formas;
 
-import bridge.enums.Cor;
+import bridge.cores.interfaces.Cor;
 import bridge.formas.interfaces.Forma;
 
 public class Quadrado implements Forma {
@@ -22,6 +22,6 @@ public class Quadrado implements Forma {
 
     @Override
     public String toString() {
-        return String.format("Quadrado[cor = %s]", this.cor);
+        return String.format("Quadrado[cor = %s]", this.cor.getClass().getSimpleName());
     }
 }

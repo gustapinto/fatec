@@ -1,0 +1,32 @@
+Arquitetura Limpa
+
+Introdução
+
+- Criada por Rober C. Martin em seu livro Arquitetura Limpa: O guia do artesão para estrutura e design de software
+- Introduz uma metodologia de desenvolvimento de software
+
+Objetivos
+
+- Minimizar os recursos humanos necessários para desenvolver e manter um serviço operando
+- Melhorar a arquitetura de um software de modo a diminuir suas depednências e o acoplamento entre seus componentes
+- Fornecer uma maneira de organizar o código de forma a encapsular as implementações das regras de negócio  
+
+Implementação
+
+- Implementa os princípios SOLID durante o desenvolvimento, de forma que os obejtos de um sistema possuam pouco acoplamento
+- Arquitetura de software em camadas, da mais interna para a mais externa:
+  1. Camada de regras de negócio
+  2. Camada de regras de negócio específicas da aplicação
+  3. Camada de interfaces e adapters
+  4. Camada de frameworks e drivers
+- As dependências devem sempre apontar para o centro, ou seja, as camadas mais exteriores (implementações) devem depender das camadas interiores (regras de negócio), e nunca o contrário
+
+Conclusão
+
+- Poderiamos ter usado a Arquitetura Limpa no PI do 5º Semestre, sua aplicação garantiria que o projeto tivesse uma arquitetura mais limpa e simples, já que atualmente existe muito acoplamento entre as implementações do mesmo, sem o uso de nenhuma interface
+
+Bibliografia
+
+- Arquitetura Limpa, 1ª Edição, Robert C. Martin
+- https://medium.com/luizalabs/descomplicando-a-clean-architecture-cf4dfc4a1ac6
+- https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html

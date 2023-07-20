@@ -1,6 +1,6 @@
 package bridge.formas.interfaces;
 
-import bridge.enums.Cor;
+import bridge.cores.interfaces.Cor;
 
 public interface Forma {
     Cor getCor();

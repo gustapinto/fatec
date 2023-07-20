@@ -1,6 +1,6 @@
 package bridge.formas;
 
-import bridge.enums.Cor;
+import bridge.cores.interfaces.Cor;
 import bridge.formas.interfaces.Forma;
 
 public class Circulo implements Forma {
@@ -22,6 +22,6 @@ public class Circulo implements Forma {
 
     @Override
     public String toString() {
-        return String.format("Circulo[cor = %s]", this.cor);
+        return String.format("Circulo[cor = %s]", this.cor.getClass().getSimpleName());
     }
 }
