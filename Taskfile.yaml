@@ -1,0 +1,12 @@
+version: 3
+
+tasks:
+  add:
+    - git add .
+    - git commit -m "$(date +%s)"
+
+  commit:
+    cmds:
+      - task: add
+      - git push
+
