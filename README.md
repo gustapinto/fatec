@@ -34,5 +34,14 @@ Uma breve coleção de exercícios, exemplos, diagramas, aprendizados e gambiarr
 - [Integração e entrega contínua](https://github.com/gustapinto/fatec/tree/main/Integra%C3%A7%C3%A3o%20e%20entrega%20cont%C3%ADnua)
 
 ### Quinto semestre
-- [Programação para dispositivos móveis 2]("https://github.com/gustapinto/fatec/tree/main/Programa%C3%A7%C3%A3o%20para%20dispositivos%20m%C3%B3veis%202")
+- [Programação para dispositivos móveis 2](https://github.com/gustapinto/fatec/tree/main/Programa%C3%A7%C3%A3o%20para%20dispositivos%20m%C3%B3veis%202)
+- [Laboratório de desenvolvimento para dispositivos móveis](https://github.com/gustapinto/fatec/tree/main/Laborat%C3%B3rio%20de%20desenvolvimento%20para%20dispositivos%20m%C3%B3veis)
+- [Redação técnica](https://github.com/gustapinto/fatec/tree/main/Reda%C3%A7%C3%A3o%20t%C3%A9cnica)
+- [Segurança no desenvolvimento de aplicações](https://github.com/gustapinto/fatec/tree/main/Seguran%C3%A7a%20no%20desenvolvimento%20de%20aplica%C3%A7%C3%B5es)
+- [Computação em nuvem I](https://github.com/gustapinto/fatec/tree/main/Computa%C3%A7%C3%A3o%20em%20nuvem%201)
 
+### Sexto semestre
+- [Laboratório de desenvolvimento multiplataforma](https://github.com/gustapinto/fatec/tree/main/Laboratorio%20de%20desenvolvimento%20multiplataforma)
+- [Processamento de linguagem natural](https://github.com/gustapinto/fatec/tree/main/Processamento%20de%20Linguagem%20Natural)
+- [Computação em nuvem II](https://github.com/gustapinto/fatec/tree/main/Computa%C3%A7%C3%A3o%20em%20nuvem%202)
+- [Ética profissional e patente](https://github.com/gustapinto/fatec/tree/main/%C3%89tica%20Profissional%20e%20Patente/2023-08-23)
