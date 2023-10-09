@@ -1,0 +1,33 @@
+version: '3.8'
+
+services:
+  api:
+    image: eclipse-temurin:17-alpine
+    command: ./gradlew clean bootRun
+    working_dir: /app
+    ports:
+      - 3000:3000
+    tty: true
+    volumes:
+      - ./:/app:Z
+    networks:
+      - backend
+    depends_on:
+      - postgres
+
+  postgres:
+    image: postgres:16.0-alpine
+    ports:
+      - 5432:5432
+    volumes:
+      - ./db://var/lib/postgresql/data:Z
+    networks:
+      - backend
+    environment:
+      POSTGRES_PASSWORD: crud_pass
+      POSTGRES_USER: crud_user
+      POSTGRES_DB: crud_db
+
+networks:
+  backend:
+    driver: bridge

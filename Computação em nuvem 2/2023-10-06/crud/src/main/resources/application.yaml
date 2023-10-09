@@ -1,0 +1,21 @@
+server:
+  port: 3000
+
+hibernate:
+  connection:
+    url: jdbc:postgresql://postgres:5432/crud_db
+
+spring:
+  datasource:
+    driverClassName: org.postgresql.Driver
+    url: jdbc:postgresql://postgres:5432/crud_db
+    username: crud_user
+    password: crud_pass
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+
+springdoc:
+  swagger-ui:
+    path: /docs/index.html
