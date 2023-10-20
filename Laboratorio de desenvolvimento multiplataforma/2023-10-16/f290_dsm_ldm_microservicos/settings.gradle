@@ -1,0 +1,2 @@
+include ':microservices:product-service'
+include ':microservices:cambio-service'
