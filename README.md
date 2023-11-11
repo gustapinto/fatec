@@ -45,3 +45,5 @@ Uma breve coleção de exercícios, exemplos, diagramas, aprendizados e gambiarr
 - [Processamento de linguagem natural](https://github.com/gustapinto/fatec/tree/main/Processamento%20de%20Linguagem%20Natural)
 - [Computação em nuvem II](https://github.com/gustapinto/fatec/tree/main/Computa%C3%A7%C3%A3o%20em%20nuvem%202)
 - [Ética profissional e patente](https://github.com/gustapinto/fatec/tree/main/%C3%89tica%20Profissional%20e%20Patente/2023-08-23)
+- [Qualidade e testes de software](https://github.com/gustapinto/fatec/tree/main/Qualidade%20e%20testes%20de%20software)
+- [Portifolio DSM](https://github.com/gustapinto/fatec/tree/main/Portifolio%20DSM)
